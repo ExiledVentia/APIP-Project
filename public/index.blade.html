@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Data Siswa</title>
+    </head>
+    <body>
+        <center>
+            <h1>Halaman Siswa</h1>
+            <a href="/siswa/tambah">Tambah</a>
+            <table border="1">
+                <tr>
+                    <th>NO</th>
+                    <th>Nama Siswa</th>
+                    <th>Jenis Kelamin</th>
+                    <th>Kelas</th>
+                    <th>Jurusan</th>
+                    <th>Angkatan</th>
+                </tr>
+                @foreach ($sis as $s)
+                <tr>
+                    <td>{{ $s->id}}</td>
+                    <td>{{ $s->nama_siswa }}</td>
+                    <td>{{ $s->jk }}</td>
+                    <td>{{ $s->kelas }}</td>
+                    <td>{{ $s->jurusan }}</td>
+                    <td>{{ $s->angkatan }}</td>
+                </tr>
+                @endforeach
+            </table>
+        </center>
+    </body>
+</html>
