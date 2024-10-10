@@ -12,7 +12,8 @@ class UsersController extends Controller
      */
     public function index()
     {
-        //
+        $user = Users::all();
+        return view('user/index', compact('user'));
     }
 
     /**
@@ -20,7 +21,7 @@ class UsersController extends Controller
      */
     public function create()
     {
-        //
+        return view('user/create');
     }
 
     /**
@@ -28,7 +29,14 @@ class UsersController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Users::create([
+            'nama' => $request->nama,
+            'username' => $request->username,
+            'password' => $request->password,
+            'alamat' => $request->alamat,
+            'jk' => $request->jk,
+            'tgl_lahir' => $request->tgl_lahir,
+        ]);
     }
 
     /**
@@ -36,7 +44,7 @@ class UsersController extends Controller
      */
     public function show(users $users)
     {
-        //
+        
     }
 
     /**
@@ -44,7 +52,9 @@ class UsersController extends Controller
      */
     public function edit(users $users)
     {
-        //
+        $user = Users::find();
+        
+        return view('user/edit', compact('user'));
     }
 
     /**
@@ -52,7 +62,10 @@ class UsersController extends Controller
      */
     public function update(Request $request, users $users)
     {
-        //
+        $user = Users::findOrfail();
+        $user->update($request->all());
+
+        return redirect()->route('user');
     }
 
     /**
@@ -60,6 +73,9 @@ class UsersController extends Controller
      */
     public function destroy(users $users)
     {
-        //
+        $user = Users::findOrfail();
+        $user->delete();
+
+        return redirect()->route('user');
     }
 }

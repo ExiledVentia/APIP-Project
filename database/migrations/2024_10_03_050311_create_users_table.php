@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('username', 25)->unique();
             $table->string('password', 60);
             $table->longText('alamat');
-            $table->enum('jk', ['L', 'P']);
+            $table->enum('jk', ['Laki-Laki', 'Perempuan']);
             $table->date('tgl_lahir');
             $table->integer('level');
             $table->timestamps();
