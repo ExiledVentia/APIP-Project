@@ -15,7 +15,7 @@
     <form action="{{route('user.store')}}" method="POST">
         @csrf
         <label for="nama">Nama:</label>
-        <input type="text" name="kelas" required><br>
+        <input type="text" name="nama" required><br>
 
         <label for="username">Username:</label>
         <input type="text" name="username" required><br>
@@ -28,14 +28,14 @@
 
         <label for="jk">Jenis Kelamin:</label>
         <label for="laki">Laki-Laki</label>
-        <input type="radio" id="laki" name="fav_language" value="Laki-Laki">
+        <input type="radio" id="laki" name="jk" value="Laki-Laki">
         <label for="laki">Perempuan</label>
-        <input type="radio" id="perempuan" name="fav_language" value="Perempuan"><br>
+        <input type="radio" id="perempuan" name="jk" value="Perempuan"><br>
 
         <label for="tgl_lahir">Tanggal Lahir:</label>
         <input type="date" name="tgl_lahir" required><br>
 
-        <button type="submit">Submit</button>
+        <button type="submit" href="{{route ('user.index')}}">Submit</button>
     </form>
 </body>
 
