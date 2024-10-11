@@ -11,7 +11,7 @@
 <body>
     <center>
         <h1>User Index</h1>
-        <a href="{{route ('user.create')}}"><button>Tambah</button></a>
+        <a href="{{route ('user.create')}}"><button>Add Data</button></a>
         <table border="1">
             <tbody>
                 <tr>
