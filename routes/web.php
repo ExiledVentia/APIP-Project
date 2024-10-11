@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\C_Siswa;
 use App\Http\Controllers\GuruController;
 use App\Http\Controllers\KelasController;
@@ -31,3 +32,9 @@ Route::get('/nilai', [C_Siswa::class, 'index']);
 Route::resource('kelas', KelasController::class)->parameters(['kelas' => 'kelas']);
 Route::resource('guru', GuruController::class);
 Route::resource('user', UsersController::class);
+
+Route::get('/login', [AuthController::class, 'login'] )->name('login');
+Route::post('/login', [AuthController::class, 'authlogin'] )->name('auth.login');
+Route::get('/register', [AuthController::class, 'register'] )->name('register');
+Route::post('/register', [AuthController::class, 'authregister'] )->name('auth.register');
+Route::delete('/logout', [AuthController::class, 'logout'] )->name('logout');
