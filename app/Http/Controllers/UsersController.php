@@ -13,7 +13,7 @@ class UsersController extends Controller
     public function index()
     {
         $user = Users::all();
-        return view('user/index', compact('user'));
+        return view('user.index', compact('user'));
     }
 
     /**
@@ -21,7 +21,7 @@ class UsersController extends Controller
      */
     public function create()
     {
-        return view('user/create');
+        return view('user.create');
     }
 
     /**
@@ -37,6 +37,8 @@ class UsersController extends Controller
             'jk' => $request->jk,
             'tgl_lahir' => $request->tgl_lahir,
         ]);
+
+        return redirect()->route('user.index');
     }
 
     /**

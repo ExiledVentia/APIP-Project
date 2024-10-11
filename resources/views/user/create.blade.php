@@ -35,7 +35,7 @@
         <label for="tgl_lahir">Tanggal Lahir:</label>
         <input type="date" name="tgl_lahir" required><br>
 
-        <button type="submit" href="{{route ('user.index')}}">Submit</button>
+        <button type="submit">Submit</button>
     </form>
 </body>
 
