@@ -19,9 +19,7 @@
                     <th>Nama</th>
                     <th>Username</th>
                     <th>Password</th>
-                    <th>Alamat</th>
-                    <th>Jenis Kelamin</th>
-                    <th>Tanggal Lahir</th>
+                    <th>Email</th>
                     <th>Aksi</th>
 
                 </tr>
@@ -31,9 +29,7 @@
                         <td>{{ $k->nama }}</td>
                         <td>{{ $k->username }}</td>
                         <td style="-webkit-text-security: disc; text-security: disc;">{{ $k->password }}</td>
-                        <td>{{ $k->alamat }}</td>
-                        <td>{{ $k->jk }}</td>
-                        <td>{{ $k->tgl_lahir }}</td>
+                        <td>{{ $k->email }}</td>
                         <td>
                             <button><a href="{{ route('user.edit', $k->id) }}">Edit</a></button>
                             <form action="{{ route('user.destroy', $k->id) }}" method="POST">

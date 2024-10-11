@@ -33,9 +33,7 @@ class UsersController extends Controller
             'nama' => $request->nama,
             'username' => $request->username,
             'password' => $request->password,
-            'alamat' => $request->alamat,
-            'jk' => $request->jk,
-            'tgl_lahir' => $request->tgl_lahir,
+            'email' => $request->email,
         ]);
 
         return redirect()->route('user.index');
@@ -52,22 +50,22 @@ class UsersController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(users $users)
+    public function edit(users $users, $id)
     {
-        $user = Users::find();
+        $user = Users::find($id);
         
-        return view('user/edit', compact('user'));
+        return view('user.edit', compact('user'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, users $users)
+    public function update(Request $request, users $users, $id)
     {
-        $user = Users::findOrfail();
+        $user = Users::findOrfail($id);
         $user->update($request->all());
 
-        return redirect()->route('user');
+        return redirect()->route('user.index');
     }
 
     /**

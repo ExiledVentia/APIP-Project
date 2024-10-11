@@ -34,9 +34,7 @@ class AuthController extends Controller
             'name' => $request->name,
             'username' => $request->username,
             'password' => $password,
-            'alamat' => $request->alamat,
-            'jk' => $request->jk,
-            'tgl_lahir' => $request->tgl_lahir,
+            'email' => $request->email,
         ]);
     }
 

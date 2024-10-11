@@ -14,9 +14,7 @@ class users extends Model
         'kelas',
         'username',
         'password',
-        'alamat',
-        'jk',
-        'tgl_lahir',
+        'email',
     ];
 }
 
