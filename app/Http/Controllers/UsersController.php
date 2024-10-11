@@ -71,11 +71,11 @@ class UsersController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(users $users)
+    public function destroy(users $users, $id)
     {
-        $user = Users::findOrfail();
+        $user = Users::findOrfail($id);
         $user->delete();
 
-        return redirect()->route('user');
+        return redirect()->route('user.index');
     }
 }
