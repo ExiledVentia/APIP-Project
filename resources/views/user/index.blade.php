@@ -40,6 +40,9 @@
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit">Delete</button>
+
+
+                                
                             </form>
                         </td>
                     </tr>
