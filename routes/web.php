@@ -9,6 +9,7 @@ Route::get('/dashboard', function () {
 });
 
 Route::resource('user', UsersController::class);
+Route::resource('barang', UsersController::class);
 
 Route::get('/login', [AuthController::class, 'login'] )->name('login');
 Route::post('/login', [AuthController::class, 'authlogin'] )->name('auth.login');
