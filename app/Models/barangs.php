@@ -13,8 +13,8 @@ class barangs extends Model
         'nama_barang',
         'kategori',
         'ruangan',
-        'tahun masuk',
-        'sumber dana',
+        'tahun_masuk',
+        'sumber_dana',
         'no_barang',
     ];
 }

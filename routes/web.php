@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\UsersController;
+use App\Http\Controllers\BarangController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/dashboard', function () {
@@ -9,7 +10,7 @@ Route::get('/dashboard', function () {
 });
 
 Route::resource('user', UsersController::class);
-Route::resource('barang', UsersController::class);
+Route::resource('barang', BarangController::class);
 
 Route::get('/login', [AuthController::class, 'login'] )->name('login');
 Route::post('/login', [AuthController::class, 'authlogin'] )->name('auth.login');

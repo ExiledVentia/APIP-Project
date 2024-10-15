@@ -30,7 +30,7 @@
         <input type="text" name="sumber_dana" required><br>
 
         <label for="no_barang">No Barang:</label>
-        <input type="text" name="no_barang" required><br>
+        <input type="number" name="no_barang" required><br>
 
         <button type="submit">Submit</button>
     </form>

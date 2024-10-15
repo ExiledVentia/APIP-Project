@@ -29,16 +29,25 @@ class BarangController extends Controller
      */
     public function store(Request $request)
     {
-        Barangs::create([
-            'nama_barang' => $request->nama_barang,
-            'kategori' => $request->kategori,
-            'ruangan' => $request->ruangan,
-            'tahun_masuk' => $request->tahun_masuk,
-            'sumber_dana' => $request->sumber_dana,
-            'no_barang' => $request->no_barang,
-        ]);
+    $request->validate([
+        'nama_barang' => 'required',
+        'kategori' => 'required',
+        'ruangan' => 'required',
+        'tahun_masuk' => 'required|date',
+        'sumber_dana' => 'required',
+        'no_barang' => 'required',
+    ]);
 
-        return redirect()->route('user.index');
+    Barangs::create([
+        'nama_barang' => $request->nama_barang,
+        'kategori' => $request->kategori,
+        'ruangan' => $request->ruangan,
+        'tahun_masuk' => $request->tahun_masuk,
+        'sumber_dana' => $request->sumber_dana,
+        'no_barang' => $request->no_barang,
+    ]);
+
+        return redirect()->route('barang.index');
     }
 
 
