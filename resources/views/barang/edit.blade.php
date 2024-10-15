@@ -37,6 +37,9 @@
         <label for="no_barang">No Barang:</label>
         <input type="text" class="form-control" name="no_barang" value="{{ old('no_barang', $barang->no_barang) }}"><br>
 
+        <label for="kode_barang">Kode Barang:</label>
+        <input type="text" class="form-control" name="kode_barang" value="{{ old('kode_barang', $barang->kode_barang) }}"><br>
+
         <button type="submit">Save</button>
     </form>
 </body>

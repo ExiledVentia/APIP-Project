@@ -16,5 +16,6 @@ class barangs extends Model
         'tahun_masuk',
         'sumber_dana',
         'no_barang',
+        'kode_barang',
     ];
 }

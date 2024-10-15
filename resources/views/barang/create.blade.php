@@ -32,6 +32,9 @@
         <label for="no_barang">No Barang:</label>
         <input type="number" name="no_barang" required><br>
 
+        <label for="kode_barang">Kode Barang:</label>
+        <input type="text" name="kode_barang" required><br>
+
         <button type="submit">Submit</button>
     </form>
 </body>

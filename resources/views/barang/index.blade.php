@@ -22,6 +22,7 @@
                     <th>Tahun Masuk</th>
                     <th>Sumber Dana</th>
                     <th>No Barang</th>
+                    <th>Kode Barang</th>
                     <th>Aksi</th>
 
                 </tr>
@@ -34,6 +35,7 @@
                         <td>{{ $k->tahun_masuk }}</td>
                         <td>{{ $k->sumber_dana }}</td>
                         <td>{{ $k->no_barang }}</td>
+                        <td>{{ $k->kode_barang }}</td>
                         <td>
                             <button><a href="{{ route('barang.edit', $k->id) }}">Edit</a></button>
                             <form action="{{ route('barang.destroy', $k->id) }}" method="POST">

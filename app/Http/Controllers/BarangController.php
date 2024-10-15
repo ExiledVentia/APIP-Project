@@ -24,20 +24,23 @@ class BarangController extends Controller
         return view('barang.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
     public function store(Request $request)
     {
     $request->validate([
+    /**
+    * Validates the request data.
+    */
         'nama_barang' => 'required',
         'kategori' => 'required',
         'ruangan' => 'required',
         'tahun_masuk' => 'required|date',
         'sumber_dana' => 'required',
         'no_barang' => 'required',
+        'kode_barang' => 'required',
     ]);
-
+    /** 
+     * Stores the record
+     */
     Barangs::create([
         'nama_barang' => $request->nama_barang,
         'kategori' => $request->kategori,
@@ -45,6 +48,7 @@ class BarangController extends Controller
         'tahun_masuk' => $request->tahun_masuk,
         'sumber_dana' => $request->sumber_dana,
         'no_barang' => $request->no_barang,
+        'kode_barang' => $request->no_barang,
     ]);
 
         return redirect()->route('barang.index');

@@ -19,6 +19,7 @@ return new class extends Migration
             $table->date('tahun_masuk');
             $table->string('sumber_dana', 50);
             $table->bigInteger('no_barang');
+            $table->string('kode_barang', 50)->unique();
             $table->timestamps();
         });
     }
