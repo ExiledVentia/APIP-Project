@@ -48,7 +48,7 @@ class BarangController extends Controller
         'tahun_masuk' => $request->tahun_masuk,
         'sumber_dana' => $request->sumber_dana,
         'no_barang' => $request->no_barang,
-        'kode_barang' => $request->no_barang,
+        'kode_barang' => $request->kode_barang,
     ]);
 
         return redirect()->route('barang.index');
