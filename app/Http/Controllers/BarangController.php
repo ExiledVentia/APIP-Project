@@ -12,6 +12,9 @@ class BarangController extends Controller
      */
     public function index()
     {
+        /**
+        * Retrieve all records of Barangs from the database.
+        */
         $barang = Barangs::all();
         return view('barang.index', compact('barang'));
     }
@@ -74,7 +77,10 @@ class BarangController extends Controller
      * Update the specified resource in storage.
      */
     public function update(Request $request, string $id)
-    {
+    {   
+        /**
+         * Find a specific 'Barang' by its ID or fail if not found.
+         */
         $barang = Barangs::findOrfail($id);
         $barang->update($request->all());
 
