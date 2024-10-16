@@ -11,7 +11,7 @@
 <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-800">
-        <div class='w-50 center border rounded px-5 mt-32 py-5 mx-auto'>
+        <div class='w-50 center border rounded px-5 mt-28 py-5 mx-auto'>
      <h1 class="text-white text-center">Login</h1>
      <form action="/login" method="POST">
         @csrf
@@ -34,10 +34,7 @@
             </div>
             <a href="#" class="text-sm font-medium text-primary-600 hover:underline dark:text-primary-500 text-white">Forgot password?</a>
         </div>
-        <button type="submit" class="w-full text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Sign in</button>
-        <p class="text-sm font-light text-gray-500 dark:text-gray-400">
-            Don’t have an account yet? <a href="#" class="font-medium text-primary-600 hover:underline dark:text-primary-500">Sign up</a>
-        </p>
+        <button type="submit" class="w-full text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 focus:outline-none dark:focus:ring-blue-800">Sign in</button>
     </form>
 </div>
 </html>
