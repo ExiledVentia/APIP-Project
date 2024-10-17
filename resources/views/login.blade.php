@@ -12,8 +12,8 @@
 </head>
 <body class="bg-gray-800">
         <div class='w-50 center border rounded px-5 mt-28 py-5 mx-auto'>
-     <h1 class="text-white text-center">Login</h1>
-     <form action="/login" method="POST">
+    <h1 class="text-white text-center">Login</h1>
+    <form action="/login" method="POST">
         @csrf
         <div>
             <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your email</label>
@@ -26,10 +26,10 @@
         <div class="flex items-center justify-between">
             <div class="flex items-start">
                 <div class="flex items-center h-5">
-                  <input id="remember" aria-describedby="remember" type="checkbox" class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-primary-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-primary-600 dark:ring-offset-gray-800" required="">
+                    <input id="remember" aria-describedby="remember" type="checkbox" class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-primary-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-primary-600 dark:ring-offset-gray-800" required="">
                 </div>
                 <div class="ml-3 text-sm">
-                  <label for="remember" class="text-gray-500 dark:text-gray-300">Remember me</label>
+                    <label for="remember" class="text-gray-500 dark:text-gray-300">Remember me</label>
                 </div>
             </div>
             <a href="#" class="text-sm font-medium text-primary-600 hover:underline dark:text-primary-500 text-white">Forgot password?</a>
