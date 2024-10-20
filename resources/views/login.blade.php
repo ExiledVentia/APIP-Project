@@ -10,31 +10,19 @@
 <link rel="stylesheet" href="login.css"/>
 <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-800">
-        <div class='w-50 center border rounded px-5 mt-28 py-5 mx-auto'>
-    <h1 class="text-white text-center">Login</h1>
+<body class="bg-white">
+        <div class='w-6/12 center border rounded px-5 mt-28 py-5 mx-auto bg-pink-400'>
+    <b><h1 class="text-black text-2xl text-center">Login</h1><br></br>
     <form action="/login" method="POST">
         @csrf
         <div>
-            <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your email</label>
-            <input type="email" name="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="name@company.com" required="">
+            <input type="email" name="email" id="email" class="bg-black border border-black text-black rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-white dark:border-white dark:placeholder-gray-400 dark:text-black- dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Username" required="">
         </div>
+        <br>
         <div>
-            <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Password</label>
-            <input type="password" name="password" id="password" placeholder="••••••••" class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required="">
-        </div>
-        <div class="flex items-center justify-between">
-            <div class="flex items-start">
-                <div class="flex items-center h-5">
-                    <input id="remember" aria-describedby="remember" type="checkbox" class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-primary-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-primary-600 dark:ring-offset-gray-800" required="">
-                </div>
-                <div class="ml-3 text-sm">
-                    <label for="remember" class="text-gray-500 dark:text-gray-300">Remember me</label>
-                </div>
-            </div>
-            <a href="#" class="text-sm font-medium text-primary-600 hover:underline dark:text-primary-500 text-white">Forgot password?</a>
-        </div>
-        <button type="submit" class="w-full text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 focus:outline-none dark:focus:ring-blue-800">Sign in</button>
+            <input type="password" name="password" id="password" placeholder="••••••••" class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-white dark:border-white dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required="">
+        </div><br>
+        <button type="submit" class="w-full text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 focus:outline-none dark:focus:ring-blue-800">Login</button>
     </form>
 </div>
 </html>
