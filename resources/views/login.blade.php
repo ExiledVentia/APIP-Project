@@ -11,12 +11,15 @@
 <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-white">
-        <div class='w-4/12 center border rounded-xl px-16 mt-36 py-5 mx-auto bg-gradient-to-r from-rose-400 from-10% via-rose-350 to-pink-200'>
+        <div class='w-4/12 center border rounded-xl px-16 mt-28 py-5 mx-auto bg-gradient-to-r from-rose-400 from-10% via-rose-350 to-pink-200'>
     <h1 class="text-black text-2xl text-center font-bold">LOGIN</h1><br></br>
     <form action="/login" method="POST">
         @csrf
-        <div>
+        <div class="relative">
             <input type="email" name="email" id="email" class="bg-black border border-black text-black rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-3.5 dark:bg-white dark:border-white dark:placeholder-gray-400 dark:text-black- dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Username" required="">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person absolute top-5 right-5 translate-y-0" viewBox="0 0 16 16">
+                <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"/>
+              </svg>
         </div>
         <br>
         <div class="relative">
@@ -28,6 +31,10 @@
         <button type="submit" class="w-full text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-md text-sm px-5 py-2.5 me-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 focus:outline-none dark:focus:ring-blue-800">Login</button>
         <div class="mt-10 grid grid-cols-1 items-center">
             <hr class="border-gray-900">
+        </div>
+        <br>
+        <div class="mt-1 flex justify-center items-center">
+            <img class="h-auto max-w-56 mt-0" src="{{ URL('img/login_logo.jpg') }}" alt="logo">
         </div>
     </form>
 </div>
