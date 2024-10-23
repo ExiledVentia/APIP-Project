@@ -33,7 +33,7 @@ class userController extends Controller
         user::create([
             'nama' => $request->nama,
             'username' => $request->username,
-            'password' => Hash::make($request->password),
+            'password' => Hash::make($request->password), // Jangan bikin data dlu sebelum gw fix biar bisa login.
             'email' => $request->email,
         ]);
 
