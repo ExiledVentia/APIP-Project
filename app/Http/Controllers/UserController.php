@@ -2,17 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\users;
+use App\Models\User;
 use Illuminate\Http\Request;
 
-class UsersController extends Controller
+class userController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $user = Users::all();
+        $user = user::all();
         return view('user.index', compact('user'));
     }
 
@@ -29,7 +29,7 @@ class UsersController extends Controller
      */
     public function store(Request $request)
     {
-        Users::create([
+        user::create([
             'nama' => $request->nama,
             'username' => $request->username,
             'password' => $request->password,
@@ -42,7 +42,7 @@ class UsersController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(users $users)
+    public function show(user $user)
     {
         
     }
@@ -50,9 +50,9 @@ class UsersController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(users $users, $id)
+    public function edit(User $user, $id)
     {
-        $user = Users::find($id);
+        $user = User::find($id);
         
         return view('user.edit', compact('user'));
     }
@@ -60,9 +60,9 @@ class UsersController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, users $users, $id)
+    public function update(Request $request, User $user, $id)
     {
-        $user = Users::findOrfail($id);
+        $user = User::findOrfail($id);
         $user->update($request->all());
 
         return redirect()->route('user.index');
@@ -71,9 +71,9 @@ class UsersController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(users $users, $id)
+    public function destroy(User $user, $id)
     {
-        $user = Users::findOrfail($id);
+        $user = User::findOrfail($id);
         $user->delete();
 
         return redirect()->route('user.index');

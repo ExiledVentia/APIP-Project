@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Users;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth as FacadeAuth;
 use Illuminate\Support\Facades\Hash;
@@ -30,7 +30,7 @@ class AuthController extends Controller
 
     public function authregister(Request $request) {
         $password = Hash::make($request->password);
-        Users::create([
+        User::create([
             'name' => $request->name,
             'username' => $request->username,
             'password' => $password,
