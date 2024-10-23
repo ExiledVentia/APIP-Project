@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Users;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth as FacadeAuth;
 use Illuminate\Support\Facades\Hash;
@@ -16,11 +16,12 @@ class AuthController extends Controller
     public function authlogin(Request $request) {
         $credentials = $request->validate([
             'email' => ['required', 'email'],
-            'password' => ['required']
+            'password' => ['required'] // mungkin disini sih errornya (Bcrypt sih tpi nnti aja ku fix InshaAllah besok.)
         ]);
 
         if (FacadeAuth::attempt($credentials)) {
-            $request->session()->regenerate();
+            $request->session()->regenerate(); 
+            return redirect()->intended('/dashboard');
         };
     }
 
@@ -30,7 +31,7 @@ class AuthController extends Controller
 
     public function authregister(Request $request) {
         $password = Hash::make($request->password);
-        Users::create([
+        User::create([
             'name' => $request->name,
             'username' => $request->username,
             'password' => $password,

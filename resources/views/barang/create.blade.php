@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>ADD BARANG DATA</title>
 </head>
-<!-- HTML form for adding user data. --> 
+<!-- HTML form for adding item data. --> 
 <body>
     <center>
         <h1>ADD BARANG DATA</h1>

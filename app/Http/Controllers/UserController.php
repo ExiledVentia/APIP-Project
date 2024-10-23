@@ -2,17 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\users;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
-class UsersController extends Controller
+class userController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $user = Users::all();
+        $user = user::all();
         return view('user.index', compact('user'));
     }
 
@@ -29,10 +30,10 @@ class UsersController extends Controller
      */
     public function store(Request $request)
     {
-        Users::create([
+        user::create([
             'nama' => $request->nama,
             'username' => $request->username,
-            'password' => $request->password,
+            'password' => Hash::make($request->password), // Jangan bikin data dlu sebelum gw fix biar bisa login.
             'email' => $request->email,
         ]);
 
@@ -42,7 +43,7 @@ class UsersController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(users $users)
+    public function show(user $user)
     {
         
     }
@@ -50,19 +51,16 @@ class UsersController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(users $users, $id)
+    public function edit(User $user)
     {
-        $user = Users::find($id);
-        
         return view('user.edit', compact('user'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, users $users, $id)
+    public function update(Request $request, User $user)
     {
-        $user = Users::findOrfail($id);
         $user->update($request->all());
 
         return redirect()->route('user.index');
@@ -71,9 +69,8 @@ class UsersController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(users $users, $id)
+    public function destroy(User $user)
     {
-        $user = Users::findOrfail($id);
         $user->delete();
 
         return redirect()->route('user.index');
