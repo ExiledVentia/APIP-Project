@@ -1,4 +1,4 @@
-# Proyek APIP
+# APIP-Project
 
 APIP (Aplikasi Inventaris dan Peminjaman Barang) adalah aplikasi web yang dibangun menggunakan framework Laravel. Ini menyediakan platform untuk mengelola inventaris dan peminjaman barang.
 
