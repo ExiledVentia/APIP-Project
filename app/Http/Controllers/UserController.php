@@ -59,10 +59,17 @@ class userController extends Controller
     /**
      * Update the specified resource in storage.
      */
+    /**
+     * Update the specified resource in storage.
+     */
     public function update(Request $request, User $user)
     {
+        if ($request->has('password')) {
+            $request->merge(['password' => Hash::make($request->password)]);
+        }
+    
         $user->update($request->all());
-
+    
         return redirect()->route('user.index');
     }
 
