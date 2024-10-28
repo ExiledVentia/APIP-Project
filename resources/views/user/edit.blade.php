@@ -20,7 +20,7 @@
     <form action="{{ route('user.update', $user) }}" method="POST">
         @csrf
         @method('PUT')
-        <body class="bg-[url('img/backgorund.jpg')] bg-center bg-cover bg-no-repeat h-[80vh] w-screen">
+        <body class="bg-[url('img/background.jpg')] bg-center bg-cover bg-no-repeat h-[80vh] w-screen">
             <div class='w-4/12 center border rounded-xl px-16 mt-20 py-5 mx-auto bg-gradient-to-r from-rose-400 from-10% via-rose-350 to-pink-200'>
         <h1 class="text-black text-2xl text-center font-bold">EDIT USER</h1><br></br>
         <form action="/edit" method="POST">
