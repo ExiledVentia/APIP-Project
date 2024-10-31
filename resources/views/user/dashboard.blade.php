@@ -17,7 +17,7 @@
    <center>
    <br>
    <div class="inventaris">
-    <button type="button" class="w-7/12 rounded-xl text-white bg-rose-400">Inventaris</button>
+    <button type="button" class="w-7/12 text-white bg-rose-400">Inventaris</button>
    </div>
 
    <div class="peminjaman">

@@ -9,6 +9,7 @@ Route::get('/', function () {
     return view('user/dashboard');
 });
 
+
 Route::resource('barang', BarangController::class);
 Route::resource('user', UserController::class);
 
