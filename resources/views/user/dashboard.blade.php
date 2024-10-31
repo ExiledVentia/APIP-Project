@@ -14,19 +14,20 @@
    <div class='w-full border rounded-xl  mx-auto bg-gradient-to-r from-rose-400 from-10% via-rose-350 to-pink-200'>
    </div>
     
+   <center>
    <br>
    <div class="inventaris">
-    <button type="button" class="w-32 rounded-xl text-white bg-rose-400">Inventaris</button>
+    <button type="button" class="w-7/12 rounded-xl text-white bg-rose-400">Inventaris</button>
    </div>
 
    <div class="peminjaman">
-    <button type="button" class="w-32 rounded-xl text-white bg-rose-400">Peminjaman</button>
+    <button type="button" class="w-7/12 rounded-xl text-white bg-rose-400">Peminjaman</button>
    </div>
 
    <div class="pengembalian">
-    <button type="button" class="w-32 rounded-xl text-white bg-rose-400">Pengembalian</button>
+    <button type="button" class="w-7/12 rounded-xl text-white bg-rose-400">Pengembalian</button>
    </div>
-
+</center>
    </div>
 </body>
 </html>
