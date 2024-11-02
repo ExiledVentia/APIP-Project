@@ -9,10 +9,15 @@
 <script src="https://cdn.tailwindcss.com"></script>
 </head> 
   
-<body class="bg-white">
-   <div class="header">
-   <div class='w-full border rounded-xl  mx-auto bg-gradient-to-r from-rose-400 from-10% via-rose-350 to-pink-200'>
+<header>
+   <div class="container">
+      <div class=" flex justify-start">
+         <img class="h-auto max-w-56 mt-0" src="{{ URL('img/login_logo.jpg') }}" alt="logo">
+      </div>
+       </ul>
    </div>
+</header>
+    
     
    <center>
    <br>
