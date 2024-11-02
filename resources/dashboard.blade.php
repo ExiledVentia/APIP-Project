@@ -15,7 +15,9 @@
        <div class=" flex justify-start">
           <img class="h-auto max-w-56 mt-0" src="{{ URL('img/login_logo.jpg') }}" alt="logo">
        <div class="mt-1 flex justify-end">
-    <a href="{{route ('login')}}"><button type="button" class="w-8/12 rounded-xl text-red-700">Login</button></a>
+    <a href="{{route ('login')}}">
+      <button type="button" class="w-8/12 rounded-xl text-red-700">Login</button>
+   </a>
        </div>
         </ul>
     </div>
