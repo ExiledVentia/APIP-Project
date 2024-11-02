@@ -21,12 +21,12 @@
     </div>
  </header>
 
-   <div class="peminjaman">
-    <button type="button" class="w-32 rounded-xl text-white bg-rose-400">Peminjaman</button>
+   <div class="peminjaman mb-4">
+    <button type="button" class="w-72 h-10 rounded-xl text-white bg-red-500">Peminjaman</button>
    </div>
 
-   <div class="pengembalian">
-    <button type="button" class="w-32 rounded-xl text-white bg-rose-400">Pengembalian</button>
+   <div class="pengembalian mb-4">
+    <button type="button" class="w-72 h-10 rounded-xl text-white bg-red-500">Pengembalian</button>
    </div>
 
    </div>
