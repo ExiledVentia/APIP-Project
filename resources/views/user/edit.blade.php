@@ -8,22 +8,24 @@
     <link rel="stylesheet" href="user.css"/>
     <title>Change User Data</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+    </style>
 </head>
-<!-- HTML form for changing student data. -->
-<!-- Saya sebagai backend capek asliii - Alif / Ozma -->
+<!-- HTML form for changing admin data. -->
 
 <body>
-    <br>
-    <center>
-        <a href="/user" <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-rose-400 dark:hover:bg-rose-500 focus:outline-none dark:focus:ring-blue-800">Back</button></a>
-    </center>
+    <br><body class="bg-cover bg-center h-screen" style="background-image: url('{{ asset('img/background.jpg') }}')">
+
     <form action="{{ route('user.update', $user) }}" method="POST">
         @csrf
         @method('PUT')
-        <body class="bg-[url('img/backgorund.jpg')] bg-center bg-cover bg-no-repeat h-[80vh] w-screen">
             <div class='w-4/12 center border rounded-xl px-16 mt-20 py-5 mx-auto bg-gradient-to-r from-rose-400 from-10% via-rose-350 to-pink-200'>
-        <h1 class="text-black text-2xl text-center font-bold">EDIT USER</h1><br></br>
+        <h1 class="text-black text-2xl text-center font-bold">EDIT PROFILE</h1><br></br>
         <form action="/edit" method="POST">
+
+            <form action="{{ route('user.update', $user) }}" method="POST">
+            @csrf
+            @method('PUT')
             <div>
                 <input type="text" name="username" id="username" class="bg-black border border-black text-black rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-3.5 dark:bg-white dark:border-white dark:placeholder-gray-400 dark:text-black- dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Username" required="">
             </div>
@@ -38,7 +40,12 @@
                     <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2m3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2M5 8h6a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1"/>
                   </svg>
             <br></div>
-            <button type="submit" class="w-full text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-md text-sm px-5 py-2.5 me-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 focus:outline-none dark:focus:ring-blue-800">Edit</button>
+            <button type="submit" class="w-44 text-white mr-3 bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-md text-sm px-5 py-2.5 me-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 focus:outline-none dark:focus:ring-blue-800">Edit</button>
+            <a href="/user"> 
+                <button type="button" class="w-40 text-white ml-4 bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-md text-sm py-2.5 me-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 focus:outline-none dark:focus:ring-blue-800">Back</button>
+            </a>
+
         </form>
     </div>
+</body>
     </html>
