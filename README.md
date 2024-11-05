@@ -4,14 +4,13 @@ APIP (Aplikasi Inventaris dan Peminjaman Barang) adalah aplikasi web yang dibang
 
 ## Fitur
 
-* Autentikasi dan otorisasi pengguna
 * Manajemen inventaris
 * Peminjaman dan pengembalian barang
 * Dasbor pengguna untuk mengelola inventaris pribadi dan riwayat peminjaman
 
 ## Overview
 
-* Laravel 11.x
-* Bootstrap 4.x
+* Laravel
+* Bootstrap
 * Tailwind CSS
-* PHP 8.2
+* PHP

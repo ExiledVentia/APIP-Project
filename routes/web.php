@@ -9,6 +9,10 @@ Route::get('/', function () {
     return view('dashboard');
 });
 
+Route::get('/dashboard', function () {
+    return view('user/dashboard');
+}); // dashboard admin (aku murka)
+
 
 Route::resource('barang', BarangController::class);
 Route::resource('user', UserController::class);
