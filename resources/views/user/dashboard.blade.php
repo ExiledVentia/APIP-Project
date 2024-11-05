@@ -9,7 +9,7 @@
 <script src="https://cdn.tailwindcss.com"></script>
 </head> 
 
-<body style="background-image: url('{{ asset('img/backwebsitekanan.jpg') }}');">
+<img class="h-auto max-w-56 mt-2" src="{{ URL('img/backwebsitekanan.jpg') }}" alt="logo">
 
 <header>
    <div class="container">
