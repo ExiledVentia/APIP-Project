@@ -13,6 +13,7 @@
 
 <header>
    <div class="container">
+      
       <div class=" flex justify-start">
          <img class="h-auto max-w-56 mt-2" src="{{ URL('img/login_logo.jpg') }}" alt="logo">
       </div>
