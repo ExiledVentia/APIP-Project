@@ -19,7 +19,7 @@
    </div>
 </header>
     
-    
+
    <center>
    <br>
    <div class="inventaris mb-4">

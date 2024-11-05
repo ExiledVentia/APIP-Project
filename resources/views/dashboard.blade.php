@@ -13,7 +13,6 @@
 
 <header>
        <div class="container">
-          
       <div class="flex justify-between items-center">
           <img class="h-auto max-w-56 mt-3 " src="{{ URL('img/login_logo.jpg') }}" alt="logo">
           
