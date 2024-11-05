@@ -9,13 +9,12 @@
 <script src="https://cdn.tailwindcss.com"></script>
 </head> 
 
-<img class="h-auto max-w-56 mt-2" src="{{ URL('img/backwebsitekanan.jpg') }}" alt="logo">
 
 <header>
-   <div class="container">
-      
+   <div class="h-32 bg-gradient-to-r from-rose-400 from-10% via-rose-350 to-pink-200 ">
+
       <div class=" flex justify-start">
-         <img class="h-auto max-w-56 mt-2" src="{{ URL('img/login_logo.jpg') }}" alt="logo">
+         <img class="h-auto max-w-56 mt-6 ml-28" src="{{ URL('img/login_logo.jpg') }}" alt="logo">
       </div>
    </div>
 </header>
@@ -34,7 +33,10 @@
    <div class="pengembalian mb-4">
     <button type="button" class="w-72 h-10  rounded-xl text-white bg-red-500">Pengembalian</button>
    </div>
+   <img class="h-auto max-w-56 mt-2" src="{{ URL('img/A.png') }}" alt="logo">
 </center>
    </div>
+
+
 </body>
 </html>
