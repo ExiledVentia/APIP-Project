@@ -23,7 +23,8 @@
 
  </header>
 <br>
-<div class="flex justify-between my-40 ml-80 mr-80">
+    <h1 style="font-weight: bold; margin-top: 50px; text-align:center;">SISTEM INFORMASI PEMINJAMAN SARANA DAN PRASARANA</h1>
+<div class="flex justify-between my-36 ml-80 mr-80">
    <div class="peminjaman">
     <button type="button" class="w-72 h-20 rounded-md text-white bg-red-500">Peminjaman</button>
    </div>
