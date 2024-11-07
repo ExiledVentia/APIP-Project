@@ -11,7 +11,7 @@
 </head> 
   
 <header>
-       <div class="h-32 bg-gradient-to-r from-rose-400 from-10% via-rose-350 to-pink-200 ">
+       <div class="h-32 bg-gradient-to-r rounded- from-rose-400 from-10% via-rose-350 to-pink-200 ">
       <div class="flex justify-between items-center">
           <img class="h-auto max-w-56 mt-6 ml-28" src="{{ URL('img/login_logo.jpg') }}" alt="logo">
 
@@ -23,19 +23,24 @@
 
  </header>
 <br>
+<body class="bg-[url('img/A.png')] bg-center bg-cover h-[85vh] w-screen">
+
     <h1 style="font-weight: bold; margin-top: 50px; text-align:center;">SISTEM INFORMASI PEMINJAMAN SARANA DAN PRASARANA</h1>
-<div class="flex justify-between my-36 ml-80 mr-80">
+<div class="flex justify-between my-36 ml-96 mr-96 ">
    <div class="peminjaman">
-    <button type="button" class="w-72 h-20 rounded-md text-white bg-red-500">Peminjaman</button>
+    <button type="button" class="w-64 h-24 ml-20 rounded-md text-white bg-red-500">Peminjaman</button>
    </div>
 
    <div class="pengembalian">
-    <button type="button" class="w-72 h-20 rounded-md text-white bg-red-500">Pengembalian</button>
+    <button type="button" class="w-64 h-24 mr-20 rounded-md text-white bg-red-500">Pengembalian</button>
    </div>
-   
+</body>
 </div>
-<div class="mt-1 flex justify-end items-center">
-    <img class="h-auto max-w-56 mt-0" src="{{ URL('img/A.png') }}" alt="bg-kk" class="w-50 h-50">
+
+
+
+ 
+
 </div>
 </body>
 </html>

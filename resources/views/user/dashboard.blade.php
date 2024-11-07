@@ -29,34 +29,34 @@
 
    <center>
    <br>
+   <body class="bg-[url('img/A.png')] bg-center bg-cover h-[85vh] w-auto">
+   </body>
    <h1 style="font-weight: bold; margin-top: 50px;">SISTEM INFORMASI PEMINJAMAN SARANA DAN PRASARANA</h1>
 
 
 
-   <div class="flex justify-between my-36 ml-28 mr-28">
-
+   <div class="flex justify-between my-36 ml-80 mr-80">
    <div class="inventaris mb-4">
-      <a href="barang/index.html">
-    <button type="button" class="w-72 h-20 rounded-md text-white bg-red-500">Inventaris</button>
+      <a href="barang">
+    <button type="button" class="w-64 h-24 rounded-md text-white bg-red-500">Inventaris</button>
       </a>
    </div>
 
    <div class="peminjaman mb-4">
-      <a href="">
-    <button type="button" class="w-72 h-20 rounded-md text-white bg-red-500">Peminjaman</button>
+      <a href="#">
+    <button type="button" class="w-64 h-24 rounded-md text-white bg-red-500">Peminjaman</button>
       </a>
    </div>
 
    <div class="pengembalian mb-4">
-      <a href="">
-    <button type="button" class="w-72 h-20 rounded-md text-white bg-red-500">Pengembalian</button>
+      <a href="#">
+    <button type="button" class="w-64 h-24 rounded-md text-white bg-red-500">Pengembalian</button>
       </a>
    </div>
 </div>
+
 </center>
+
    </div>
-
-   <img src="{{ asset('img/A.png') }}" alt="Gambar">
-
 </body>
 </html>
