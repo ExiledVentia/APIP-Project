@@ -97,4 +97,10 @@ class BarangController extends Controller
 
         return redirect()->route('barang.index');
     }
+
+    public function search(Request $request, string $barang)
+    {
+        $barang = Barangs::where('nama_barang', 'like', '%' . $request->search . '%')->get();
+        return view('barang.index', compact('barang'));
+    }
 }
