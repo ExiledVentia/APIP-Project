@@ -11,7 +11,17 @@
 <body>
     <center>
         <h1>Inventaris</h1>
-        <a href="{{route ('barang.create')}}"><button>Add Data</button></a>
+
+        <form action="" method="GET">
+            <div>
+                <input type="search" name="search" placeholder="Cari barang..." required autocomplete="off"/>
+                <button type="submit">Cari</button>               
+                
+            </div>
+        </form>
+
+        <a href="{{ route('barang.create') }}"><button>Add Data</button></a>
+        
         <table border="1">
             <tbody>
                 <tr>
@@ -42,7 +52,7 @@
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit">Delete</button>
-                                
+
                             </form>
                         </td>
                     </tr>

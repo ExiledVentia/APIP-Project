@@ -36,7 +36,7 @@
    <div class="flex justify-between my-36 ml-28 mr-28">
 
    <div class="inventaris mb-4">
-      <a href="barang/index.html">
+      <a href="barang/">
     <button type="button" class="w-72 h-20 rounded-md text-white bg-red-500">Inventaris</button>
       </a>
    </div>
