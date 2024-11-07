@@ -39,19 +39,25 @@
    <div class="flex justify-between my-36 ml-72 mr-80">
    <div class="inventaris mb-4">
       <a href="barang">
-    <button type="button" class="w-72 h-24 rounded-md text-white bg-red-500">Inventaris</button>
+    <button type="button" class="w-72 h-24 rounded-md text-white bg-red-500">INVENTARIS</button>
       </a>
    </div>
 
    <div class="peminjaman mb-4">
       <a href="#">
-    <button type="button" class="w-72 h-24 rounded-md text-white bg-red-500">Peminjaman</button>
+        <button type="button" class="w-72 h-24 rounded-md text-white bg-red-500 flex items-center justify-around px-4">
+          <span>PEMINJAMAN</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-folder2" viewBox="0 0 16 16">
+            <path d="M1 3.5A1.5 1.5 0 0 1 2.5 2h2.764c.958 0 1.76.56 2.311 1.184C7.985 3.648  8.48 4 9 4h4.5A1.5 1.5 0 0 1 15 5.5v7a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 1 12.5zM2.5 3a.5.5 0 0 0-.5.5V6h12v-.5a.5.5 0 0 0-.5-.5H9c-.964 0-1.71-.629-2.174-1.154C6.374 3.334 5.82 3 5.264 3zM14 7H2v5.5a.5.5 0 0 0 .5.5h11a.5.5 0 0 0 .5-.5z"/> 
+          </svg>
+        </button>
       </a>
-   </div>
+    </div>
+    
 
    <div class="pengembalian mb-4">
       <a href="#">
-    <button type="button" class="w-72 h-24 rounded-md text-white bg-red-500">Pengembalian</button>
+    <button type="button" class="w-72 h-24 rounded-md text-white bg-red-500">PENGEMBALIAN</button>
       </a>
    </div>
 </div>
