@@ -16,7 +16,8 @@ Route::get('/dashboard', function () {
 
 Route::resource('barang', BarangController::class);
 Route::resource('user', UserController::class);
-Route::get('/barang/search', [BarangController::class, 'search'] )->name('search');
+Route::get('/search-barang', [BarangController::class, 'search'])->name('barang.search');
+// Route::get('/barang/search', [BarangController::class, 'search'] )->name('barang.search');
 
 Route::get('/login', [AuthController::class, 'login'] )->name('login');
 Route::post('/login', [AuthController::class, 'authlogin'] )->name('auth.login');

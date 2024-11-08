@@ -12,16 +12,18 @@
     <center>
         <h1>Inventaris</h1>
 
-        <form action="" method="GET">
+        <!-- Search Form -->
+        <form action="{{ route('barang.search') }}" method="GET">
             <div>
-                <input type="search" name="search" placeholder="Cari barang..." required autocomplete="off"/>
-                <button type="submit">Cari</button>               
-                
+                <input type="search" name="query" placeholder="Cari barang..." required autocomplete="off" />
+                <button type="submit">Cari</button>
             </div>
         </form>
 
+        <!-- Add Data Button -->
         <a href="{{ route('barang.create') }}"><button>Add Data</button></a>
-        
+
+        <!-- Table for Displaying Barang Data -->
         <table border="1">
             <tbody>
                 <tr>
@@ -34,9 +36,10 @@
                     <th>No Barang</th>
                     <th>Kode Barang</th>
                     <th>Aksi</th>
-
                 </tr>
-                @foreach ($barang as $k)
+
+                <!-- Display Search Results or All Barang Data -->
+                @forelse ($barang as $k)
                     <tr>
                         <td>{{ $k->id }}</td>
                         <td>{{ $k->nama_barang }}</td>
@@ -48,15 +51,19 @@
                         <td>{{ $k->kode_barang }}</td>
                         <td>
                             <button><a href="{{ route('barang.edit', $k->id) }}">Edit</a></button>
-                            <form action="{{ route('barang.destroy', $k->id) }}" method="POST">
+                            <form action="{{ route('barang.destroy', $k->id) }}" method="POST"
+                                style="display:inline;">
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit">Delete</button>
-
                             </form>
                         </td>
                     </tr>
-                @endforeach
+                @empty
+                    <tr>
+                        <td colspan="9">No results found.</td>
+                    </tr>
+                @endforelse
             </tbody>
         </table>
     </center>
