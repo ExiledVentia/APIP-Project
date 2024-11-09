@@ -640,14 +640,6 @@ video {
   margin-top: 1.5rem;
 }
 
-.me-3 {
-  margin-inline-end: 0.75rem;
-}
-
-.mb-3 {
-  margin-bottom: 0.75rem;
-}
-
 .block {
   display: block;
 }
@@ -727,6 +719,10 @@ video {
   width: 33.333333%;
 }
 
+.w-7\/12 {
+  width: 58.333333%;
+}
+
 .w-\[calc\(100\%\+8rem\)\] {
   width: calc(100% + 8rem);
 }
@@ -741,10 +737,6 @@ video {
 
 .w-screen {
   width: 100vw;
-}
-
-.w-5\/12 {
-  width: 41.666667%;
 }
 
 .max-w-2xl {
@@ -916,6 +908,10 @@ video {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.bg-\[url\(\'img\/backgorund\.jpg\'\)\] {
+  background-image: url('img/backgorund.jpg');
 }
 
 .bg-\[url\(\'img\/background\.jpg\'\)\] {
