@@ -97,4 +97,19 @@ class BarangController extends Controller
 
         return redirect()->route('barang.index');
     }
+
+    public function search(Request $request)
+    {
+        // Query dari request
+        $query = $request->input('query');
+
+        // Cari data berdasarkan query
+        $barang = Barangs::where('nama_barang', 'like', "%$query%")
+        ->orWhere('kategori', 'like', "%$query%")
+        ->orWhere('kode_barang', 'like', "%$query%")
+        ->get();
+        
+        // Tampilkan hasil pencarian
+        return view('barang.index', ['barang' => $barang]);
+    }
 }
