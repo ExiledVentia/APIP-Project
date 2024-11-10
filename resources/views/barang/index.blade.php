@@ -9,6 +9,27 @@
     <title>Inventaris</title>
 </head>
 
+<header>
+    <div class="h-32 bg-gradient-to-r from-rose-400 from-10% via-rose-350 to-pink-200 ">
+       <div class="flex justify-between items-center mr-12">
+ 
+          <img class="h-auto max-w-56 mt-6 ml-28" src="{{ URL('img/login_logo.jpg') }}" alt="logo">
+          
+          <a href="dashboard"> 
+            <button type="button" class="text-red-600 flex items-center justify-center">
+            <span>DASHBOARD |</span>
+          </a>
+
+          <a href="user">
+          <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="red" class="bi bi-person-circle" viewBox="0 0 16 16" style="margin-top: 10px; margin-left: 20px;">
+             <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+             <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+           </svg>
+          </a>
+       </div>
+    </div>
+ </header>
+
 <body class="bg-[url('img/A.png')] bg-center bg-cover h-[90vh] w-screen">
     <center>
         <h1>Inventaris</h1>
@@ -28,7 +49,7 @@
        
 
 <div class="relative overflow-x-auto">
-    <div class='w-fit center border rounded-xl px-16 mt-28 py-5 mx-auto bg-gradient-to-r from-rose-400 from-10% via-rose-350 to-pink-200'>
+    <div class='w-fit center border rounded-xl px-16 mt-14 py-5 mx-auto bg-gradient-to-r from-rose-400 from-10% via-rose-350 to-pink-200'>
     <table class="w-3/5 text-sm text-left rtl:text-right text-black dark:text-black">
         <thead class="text-xs text-white uppercase bg-white dark:text-black">
             <tr>
