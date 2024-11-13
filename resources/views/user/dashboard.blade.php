@@ -35,17 +35,20 @@
       <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
   </svg>
 
-       <!--Pangil Username-->
-       <h1>Username--</h1>
+      <!--Panggil username dan email menggunakan auth-->
+      <!--btw formatting htmlny asli merah2 ~ Alif ~ -->
 
-       <!--Garis-->
+      <!--Pangil Username-->
+      <h1>Username: {{ Auth::user()->nama }}</h1>
+
+      <!--Garis-->
     <div class="mt-10 grid grid-cols-1 items-center">
       <hr class="border-gray-900">
   </div>
 
 
-      <!--Pangil Gmail-->
-      <h1>Gmail--</h1>
+      <!--Pangil Email-->
+      <h1>Email: {{ Auth::user()->email }}</h1>
 
 
       <!--Button Edit&Logout-->
