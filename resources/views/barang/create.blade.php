@@ -9,7 +9,7 @@
 </head>
 <!-- HTML form for adding item data. --> 
 
-<body class="bg-[url('img/A.png')] bg-center bg-cover h-[90vh] w-screen">
+<body class="bg-[url('/img/A.png')] bg-center bg-cover h-[85vh] w-screen">
 <header>
     <div class="h-32 bg-gradient-to-r from-rose-400 from-10% via-rose-350 to-pink-200 ">
        <div class="flex justify-between items-center mr-12">
@@ -37,7 +37,7 @@
    </svg>
  
         <!--Pangil Username-->
-        <h1>Username--</h1>
+        <td>Username</td>
  
         <!--Garis-->
      <div class="mt-10 grid grid-cols-1 items-center">
@@ -46,8 +46,8 @@
  
  
        <!--Pangil Gmail-->
-       <h1>Gmail--</h1>
- 
+      <td>Email</td>
+       
  
        <!--Button Edit&Logout-->
        <br>
@@ -73,44 +73,45 @@
  
     
 
-    <center>
-        <h1>TAMBAH</h1>
- 
-    <div class='w-3/6 center border rounded-xl px-11 mt-8 py-5 mx-auto bg-gradient-to-r from-rose-400 from-10% via-rose-350 to-pink-200'>
-    <table class="w-auto text-sm text-left rtl:text-right text-black dark:text-black">
-    <form action="{{route('barang.store')}}" method="POST">
-        @csrf
-        <div class="mb-4">
-            <label for="nama_barang"></label>
-            <input type="text" name="nama_barang" class="w-full h-11" placeholder="Nama Barang" required>
-        </div>
-        <div class="mb-4">
-            <label for="kategori"></label>
-            <input type="text" name="kategori" class="w-full h-11" placeholder="Kategori" required>
-        </div>
-        <div class="mb-4">
-            <label for="ruangan"></label>
-            <input type="text" name="ruangan" class="w-full h-11" placeholder="Ruangan" required>
-        </div>
-        <div class="mb-4">
-            <label for="tahun_masuk"></label>
-            <input type="date" name="tahun_masuk" class="w-full h-11" placeholder="Tahun Masuk" required>
-        </div>
-        <div class="mb-4">
-            <label for="sumber_dana"></label>
-            <input type="text" name="sumber_dana" class="w-full h-11" placeholder="Sumber Dana" required>
-        </div>
-        <div class="mb-4">
-            <label for="no_barang"></label>
-            <input type="number" name="no_barang" class="w-full h-11" placeholder="Nomor/jumlah" required>
-        </div>
-        <div class="mb-4">
-            <label for="kode_barang"></label>
-            <input type="text" name="kode_barang" class="w-full h-11" placeholder="Kode Barang" required>
-        </div>
-        <button type="submit" class="px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-700">Submit</button>
-    </form>
-</table>
+ <center>
+    <h1 class="font-bold text-3xl py-2 relative top-4 right-80">TAMBAH</h1> <!-- Mengubah top-8 menjadi top-4 -->
+
+    <div class='w-3/6 center border rounded-xl px-11 mt-4 py-5 mx-auto bg-gradient-to-r from-rose-400 from-10% via-rose-350 to-pink-200'> 
+        <table class="w-auto text-sm text-left rtl:text-right text-black dark:text-black">
+            <form action="{{route('barang.store')}}" method="POST">
+                @csrf
+                <div class="mb-4">
+                    <label for="nama_barang"></label>
+                    <input type="text" name="nama_barang" class="w-full h-11 rounded-lg placeholder-pink-600" placeholder=" Nama Barang" required>
+                </div>
+                <div class="mb-4">
+                    <label for="kategori"></label>
+                    <input type="text" name="kategori" class="w-full h-11 rounded-lg placeholder-pink-600" placeholder=" Kategori" required>
+                </div>
+                <div class="mb-4">
+                    <label for="ruangan"></label>
+                    <input type="text" name="ruangan" class="w-full h-11 rounded-lg placeholder-pink-600" placeholder=" Ruangan" required>
+                </div>
+                <div class="mb-4">
+                    <label for="tahun_masuk"></label>
+                    <input type="date" name="tahun_masuk" class="w-full h-11 rounded-lg text-pink-600" required>
+                </div>
+                <div class="mb-4">
+                    <label for="sumber_dana"></label>
+                    <input type="text" name="sumber_dana" class="w-full h-11 rounded-lg placeholder-pink-600" placeholder=" Sumber Dana" required>
+                </div>
+                <div class="mb-4">
+                    <label for="no_barang"></label>
+                    <input type="number" name="no_barang" class="w-full h-11 rounded-lg placeholder-pink-600" placeholder=" Nomor/jumlah" required>
+                </div>
+                <div class="mb-4">
+                    <label for="kode_barang"></label>
+                    <input type="text" name="kode_barang" class="w-full h-11 rounded-lg placeholder-pink-600" placeholder=" Kode Barang" required>
+                </div>
+                <button type="submit" class="px-4 py-2 w-6/12 bg-red-500 text-white rounded-md hover:bg-red-700">Submit</button>
+            </form>
+        </table>
+    </div>
 </center>
 
 
