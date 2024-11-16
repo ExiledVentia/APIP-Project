@@ -39,16 +39,18 @@
       <!--btw formatting htmlny asli merah2 ~ Alif ~ -->
 
       <!--Pangil Username-->
-      <h1>Username: {{ Auth::user()->nama }}</h1>
+      <h1 style="text-align: center;">{{ Auth::user()->nama }}</h1>
+
 
       <!--Garis-->
-    <div class="mt-10 grid grid-cols-1 items-center">
+    <div class="mt-4 grid-cols-1 items-center">
       <hr class="border-gray-900">
   </div>
 
 
       <!--Pangil Email-->
-      <h1>Email: {{ Auth::user()->email }}</h1>
+      <h1 style="text-align: center;">{{ Auth::user()->email }}</h1>
+
 
 
       <!--Button Edit&Logout-->

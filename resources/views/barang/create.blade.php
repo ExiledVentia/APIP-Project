@@ -14,7 +14,12 @@
     <div class="h-32 bg-gradient-to-r from-rose-400 from-10% via-rose-350 to-pink-200 ">
        <div class="flex justify-between items-center mr-12">
  
-          <img class="h-auto max-w-56 mt-6 ml-28" src="{{ URL('img/login_logo.jpg') }}" alt="logo">
+          <img class="h-auto max-w-56 mt-6 ml-36" src="{{ URL('img/login_logo.jpg') }}" alt="logo">
+
+          <a href="http://127.0.0.1:8000/dashboard" class="text-red-600 absolute right-24">
+            <span>DASHBOARD |</span>
+        </a>
+        
 
            
             <!-- Dropdown User -->
@@ -31,22 +36,22 @@
    <div class="py-1" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
      
      <!--Propil-->
-     <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="red" class="bi bi-person-circle" viewBox="0 0 16 16" style="margin-top: 30px; margin-left: 140px;">
+     <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="red" class="bi bi-person-circle" viewBox="0 0 16 16" style="margin-top: 30px; margin-left: 138px;">
        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
        <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
    </svg>
  
         <!--Pangil Username-->
-        <td>Username</td>
+        <h1 style="text-align: center;">{{ Auth::user()->nama }}</h1>
  
         <!--Garis-->
-     <div class="mt-10 grid grid-cols-1 items-center">
+     <div class="mt-4 grid grid-cols-1 items-center">
        <hr class="border-gray-900">
    </div>
  
  
        <!--Pangil Gmail-->
-      <td>Email</td>
+       <h1 style="text-align: center;">{{ Auth::user()->email }}</h1>
        
  
        <!--Button Edit&Logout-->
