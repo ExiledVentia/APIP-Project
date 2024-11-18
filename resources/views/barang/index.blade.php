@@ -31,7 +31,7 @@
        </div>
     </div>
 </header>
-<h1>Inventaris</h1>
+<h1 class="font-bold text-3xl py-2 relative top-4 -left-96">INVENTARIS</h1> 
  
        
 
@@ -39,7 +39,7 @@
        
 
 <div class="relative overflow-x-auto">
-    <div class='w-11/12 center border rounded-xl px-16 mt-14 py-5 mx-auto bg-gradient-to-r from-rose-400 from-10% via-rose-350 to-pink-200'>
+    <div class='w-10/12 center border rounded-xl px-16 mt-14 py-5 mx-auto bg-gradient-to-r from-rose-400 from-10% via-rose-350 to-pink-200'>
     <table class="w-auto text-sm text-left rtl:text-right text-black dark:text-black">
         <thead class="text-center text-white uppercase bg-white dark:text-black border ">
 
