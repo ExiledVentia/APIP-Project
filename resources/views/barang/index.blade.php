@@ -10,7 +10,7 @@
 </head>
 
 <body class="bg-[url('img/A.png')] bg-center bg-cover h-[90vh] w-screen">
-    <center>
+    
 <header>
     <div class="h-32 bg-gradient-to-r from-rose-400 from-10% via-rose-350 to-pink-200 ">
        <div class="flex justify-between items-center mr-12">
@@ -38,7 +38,7 @@
         <!-- Table for Displaying Barang Data -->
        
 
-<div class="relative overflow-x-auto">
+<div class=" overflow-x-auto flex">
     <div class='w-10/12 center border rounded-xl px-16 mt-14 py-5 mx-auto bg-gradient-to-r from-rose-400 from-10% via-rose-350 to-pink-200'>
     <table class="w-auto text-sm text-left rtl:text-right text-black dark:text-black">
         <thead class="text-center text-white uppercase bg-white dark:text-black border ">
@@ -46,13 +46,16 @@
             <!-- Search Form -->
             <form action="{{ route('barang.search') }}" method="GET">
                             
-                <form class="max-w-md mx-auto">   
+                <form class="max-w-md ">   
                     <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>                    
+                    
+                    <div>
                     <input type="search" name="query" placeholder="Cari barang..." class="block w-1/4 p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-white dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search" required autocomplete="off">
-                    <button type="submit" class="w-fit text-black bg-rose-400 hover:bg-red-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-xl text-sm px-5 py-2.5 me-2 mb-2 dark:bg-rose-400 dark:hover:bg-rose-500 focus:outline-none dark:focus:ring-blue-800">Cari</button>
+                    <button type="submit" class="flex justify-center items-center w-fit text-black bg-rose-400 hover:bg-red-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-xl text-sm px-5 py-2.5 me-2 mb-2 dark:bg-rose-400 dark:hover:bg-rose-500 focus:outline-none dark:focus:ring-blue-800">Cari</button>
+                    </div>
+                
                 </form>
-            <br>
-            <br>
+           
             <!-- Add Data Button -->
             <a href="{{ route('barang.create') }}">
                 <button class="w-fit text-black bg-rose-400 hover:bg-red-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-md text-sm px-5 py-2.5 me-2 mb-2 dark:bg-rose-400 dark:hover:bg-rose-500 focus:outline-none dark:focus:ring-blue-800" style="margin-left: 980px;">
@@ -122,7 +125,6 @@
             </tr>
         @endforelse
 </table>
-</center>
 </div>
 </div>
 </body>
