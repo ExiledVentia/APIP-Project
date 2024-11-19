@@ -58,19 +58,20 @@
      
            <!--Button Edit&Logout-->
            <br>
-           <a href="user" class="flex items-center justify-center mb-3">
+           <a href="/user" class="flex items-center justify-center mb-3">
              <button type="button" class="w-60 h-7 px-4 py-2 text-sm rounded-xl shadow-md text-black flex items-center justify-center hover:bg-gray-100 hover:text-gray-900" role="menuitem">
                  <span>Edit Profile</span>
              </button>
          </a>
          
-         <a href="#" class="flex items-center justify-center">
-             <button type="button" class="w-60 h-7 px-4 py-2 text-sm rounded-xl shadow-md text-black flex items-center justify-center hover:bg-gray-100 hover:text-gray-900" role="menuitem">
-                 <span>Logout</span>
-             </button>
-         </a>
-         
-       
+         <form method="POST" action="{{ route('logout') }}" class="flex items-center justify-center">
+            @csrf
+            @method('DELETE') 
+            <button type="submit" class="w-60 h-7 px-4 py-2 text-sm rounded-xl shadow-md text-black flex items-center justify-center hover:bg-gray-100 hover:text-gray-900" role="menuitem">
+                <span>Logout</span>
+            </button>
+        </form>
+
          </div>
      </div>
      </div>
