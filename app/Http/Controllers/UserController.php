@@ -43,10 +43,7 @@ class userController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(user $user)
-    {
-        
-    }
+    public function show(user $user) {}
 
     /**
      * Show the form for editing the specified resource.
@@ -61,7 +58,14 @@ class userController extends Controller
      */
     public function update(Request $request, User $user)
     {
-        $user->update($request->all());
+        $data = $request->except('password'); // PASSWORD DI SIRKEL
+
+        // CEK KLO PASSWROD DI ISI GA, KLO KOSONG YH GA DIGANTI
+        if ($request->filled('password')) {
+            $data['password'] = Hash::make($request->password);
+        }
+
+        $user->update($data);
 
         return redirect()->route('user.index');
     }
