@@ -9,10 +9,10 @@
     <title>Inventaris</title>
 </head>
 
-<body class="bg-[url('/img/A.png')] bg-center bg-cover h-3/6 bg-no-repeat">
+<body class="bg-[url('/img/A.png')] bg-center bg-cover h-[90vh] bg-no-repeat w-screen">
 
     <header>
-        <div class="h-32 bg-gradient-to-r from-rose-400 from-10% via-rose-350 to-pink-200 ">
+        <div class="w-screen h-32 bg-gradient-to-r from-rose-400 from-10% via-rose-350 to-pink-200 ">
            <div class="flex justify-between items-center mr-12">
      
               <img class="h-auto max-w-56 mt-6 ml-36" src="{{ URL('img/login_logo.jpg') }}" alt="logo">
