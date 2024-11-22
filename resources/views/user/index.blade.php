@@ -21,7 +21,7 @@
 
             <!-- Tabel User -->
             <div class="overflow-x-auto">
-                <table class="min-w-full bg-white shadow-md rounded-lg overflow-hidden">
+                <table class="min-w-fit bg-white shadow-md rounded-lg overflow-hidden">
                     <thead class="bg-gradient-to-r from-rose-400 from-10% via-pink-500 to-pink-300 text-white">
                         <tr>
                             <th class="py-3 px-6 text-left">No</th>

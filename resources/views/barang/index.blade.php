@@ -40,25 +40,24 @@
 
 <div class=" overflow-x-auto flex">
     <div class='w-10/12 center border rounded-xl px-16 mt-14 py-5 mx-auto bg-gradient-to-r from-rose-400 from-10% via-rose-350 to-pink-200'>
-    <table class="w-auto text-sm text-left rtl:text-right text-black dark:text-black">
-        <thead class="text-center text-white uppercase bg-white dark:text-black border ">
+    <table class="w-auto text-sm text-left rtl:text-right text-black dark:text-black shadow-md rounded-lg overflow-hidden">
+        <thead class="text-center text-white uppercase bg-white dark:text-black">
 
             <!-- Search Form -->
             <form action="{{ route('barang.search') }}" method="GET">
                             
-                <form class="max-w-md ">   
+                <form class="max-w-md">   
                     <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>                    
                     
-                    <div>
-                    <input type="search" name="query" placeholder="Cari barang..." class="block w-1/4 p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-white dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search" required autocomplete="off">
-                    <button type="submit" class="flex justify-center items-center w-fit text-black bg-rose-400 hover:bg-red-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-xl text-sm px-5 py-2.5 me-2 mb-2 dark:bg-rose-400 dark:hover:bg-rose-500 focus:outline-none dark:focus:ring-blue-800">Cari</button>
-                    </div>
-                
-                </form>
-           
+                    
+                <div class="flex justify-center h-9">
+                    <input type="search" name="query" placeholder="Cari barang..." class="block w-1/4 m-0.5 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-white dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search" required autocomplete="off" style="margin-left: 805px;"> 
+                </div>
+            </form>
+            <br>
             <!-- Add Data Button -->
             <a href="{{ route('barang.create') }}">
-                <button class="w-fit text-black bg-rose-400 hover:bg-red-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-md text-sm px-5 py-2.5 me-2 mb-2 dark:bg-rose-400 dark:hover:bg-rose-500 focus:outline-none dark:focus:ring-blue-800" style="margin-left: 980px;">
+                <button class="text-black bg-rose-400 hover:bg-red-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-md text-sm px-5 py-1.5 me-1 mb-2 dark:bg-rose-400 dark:hover:bg-rose-500 focus:outline-none dark:focus:ring-blue-800" style="margin-left: 971px;">
                     + Tambah Barang
                 </button>
             </a>
