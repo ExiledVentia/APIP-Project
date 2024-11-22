@@ -51,10 +51,9 @@
                     
                     
                 <div class="flex justify-center h-9">
-                    <input type="search" name="query" placeholder="Cari barang..." class="block w-1/4 m-0.5 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-white dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search" required autocomplete="off" style="margin-left: 805px;"> 
+                    <input type="search" name="query" placeholder="Cari barang..." class="block w-1/4 m-0.5 ps-10 py-2 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-white dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search" required autocomplete="off" style="margin-left: 805px;"> 
                 </div>
             </form>
-            <br>
             <!-- Add Data Button -->
             <a href="{{ route('barang.create') }}">
                 <button class="text-black bg-rose-400 hover:bg-red-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-md text-sm px-5 py-1.5 me-1 mb-2 dark:bg-rose-400 dark:hover:bg-rose-500 focus:outline-none dark:focus:ring-blue-800" style="margin-left: 971px;">

@@ -1507,6 +1507,16 @@ video {
   padding-bottom: 2.75rem;
 }
 
+.py-8 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
 .ps-10 {
   padding-inline-start: 2.5rem;
 }
