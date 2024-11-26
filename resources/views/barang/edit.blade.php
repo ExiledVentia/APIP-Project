@@ -11,14 +11,14 @@
 <!-- HTML form for changing student data. -->
 
 
-<body class="bg-[url('/img/A.png')] bg-center bg-cover h-[85vh] w-screen">
+<body class="bg-[url('/img/A.png')] bg-center bg-cover h-[90vh] w-screen">
     <header>
         <div class="h-32 bg-gradient-to-r from-rose-400 from-10% via-rose-350 to-pink-200 ">
            <div class="flex justify-between items-center mr-12">
      
               <img class="h-auto max-w-56 mt-6 ml-36" src="{{ URL('img/login_logo.jpg') }}" alt="logo">
     
-              <a href="http://127.0.0.1:8000/dashboard" class="text-red-600 absolute right-24">
+              <a href="http://127.0.0.1:8000/dashboard" class="text-red-600 absolute right-24 mt-9">
                 <span>DASHBOARD |</span>
             </a>
             
@@ -26,7 +26,7 @@
                
                 <!-- Dropdown User -->
                 <div class="relative inline-block text-left">
-                 <button onclick="toggleDropdown()" class="inline-flex items-center justify-center w-full text-red-500 hover:text-red-700 focus:outline-none">
+                 <button onclick="toggleDropdown()" class="inline-flex items-center justify-center w-full text-red-500 hover:text-red-700 focus:outline-none mt-10">
                      <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="red" class="bi bi-person-circle" viewBox="0 0 16 16">
                          <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
                          <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
