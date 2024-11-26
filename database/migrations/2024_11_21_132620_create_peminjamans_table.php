@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('peminjamans', function (Blueprint $table) {
             $table->id();
             $table->date('tgl_pinjam');
+            $table->date('tgl_kembali');
             $table->timestamps();
         });
     }

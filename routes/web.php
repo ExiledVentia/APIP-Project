@@ -23,3 +23,5 @@ Route::post('/login', [AuthController::class, 'authlogin'] )->name('auth.login')
 Route::get('/register', [AuthController::class, 'register'] )->name('register');
 Route::post('/register', [AuthController::class, 'authregister'] )->name('auth.register');
 Route::delete('/logout', [AuthController::class, 'logout'] )->name('logout');
+
+// bikin route pinjam dan kembali nnti
