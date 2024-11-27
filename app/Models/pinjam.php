@@ -9,7 +9,7 @@ class pinjam extends Model
 {
     use HasFactory;
 
-    protected $table = 'pinjams';
+    protected $table = 'peminjamans';
     protected $fillable = [
         'id',
         'id_user',

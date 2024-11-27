@@ -28,7 +28,7 @@
     <h1 style="font-weight: bold; margin-top: 40px; text-align:center;">SISTEM INFORMASI PEMINJAMAN SARANA DAN PRASARANA</h1>
 <div class="flex justify-between my-28 ml-96 mr-96">
     <div class="peminjaman mb-4">
-        <a href="#">
+        <a href="peminjaman/index.blade.php">
           <button type="button" class="w-72 h-28 ml-16 rounded-md text-white bg-red-500 flex items-center justify-around px-4">
             <span>PEMINJAMAN</span>
             <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="white" class="bi bi-folder2" viewBox="0 0 16 16">
