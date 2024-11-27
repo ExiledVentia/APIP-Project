@@ -10,12 +10,15 @@ use Illuminate\Support\Facades\DB;
 class PinjamController extends Controller
 {
     public function index() {
-        $peminjaman = DB::table('peminjaman')
-        ->leftJoin('barangs', 'peminjaman.id_barang', '=', 'barangs.id')
-        ->leftJoin('users', 'peminjaman.id_user', '=', 'users.id')
-        ->select('peminjaman.*', 'barangs.nama_barang', 'users.nama')
+        $peminjaman = DB::table('peminjamans')
+        ->leftJoin('barangs', 'peminjamans.id_barang', '=', 'barangs.id')
+        ->leftJoin('users', 'peminjamans.id_user', '=', 'users.id')
+        ->select('peminjamans.*', 'barangs.nama_barang', 'users.nama')
         ->get();
         // BARU INI YAH... MASIH BELAJAR SOALNY 
-        return view('pinjam.index', compact('peminjaman'));
+        return view('peminjaman.index', compact('peminjaman'));
+    }
+    public function show() {
+      
     }
 }
