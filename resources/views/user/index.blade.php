@@ -47,10 +47,10 @@
                                     </a>
                                     
                                     <!-- Form Delete -->
-                                    <form action="{{ route('user.destroy', $k->id) }}" method="POST" onsubmit="return confirm('Are you sure?')">
+                                    <form action="{{ route('user.destroy', $k->id) }}" method="POST">
                                         @csrf
                                         @method('DELETE')
-                                        <button type="submit" class="bg-red-500 text-white px-4 py-2 rounded-md hover:bg-red-600">Delete</button>
+                                        <button type="submit" class="bg-red-500 text-white px-4 py-2 rounded-md hover:bg-red-600" data-confirm-delete = "true" >Delete</button>
                                     </form>
                                 </td>
                             </tr>
@@ -61,6 +61,7 @@
         </div>
     </center>
 
+    @include('sweetalert::alert')
 </body>
 
 </html>

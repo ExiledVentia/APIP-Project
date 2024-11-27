@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Barangs;
 use Illuminate\Http\Request;
+use RealRashid\SweetAlert\Facades\Alert;
+
 
 class BarangController extends Controller
 {
@@ -17,6 +19,7 @@ class BarangController extends Controller
         */
         $barang = Barangs::all();
         return view('barang.index', compact('barang'));
+        
     }
 
     /**
@@ -53,7 +56,8 @@ class BarangController extends Controller
         'no_barang' => $request->no_barang,
         'kode_barang' => $request->kode_barang,
     ]);
-
+    
+        Alert::success('Success Title', 'YEY');
         return redirect()->route('barang.index');
     }
 

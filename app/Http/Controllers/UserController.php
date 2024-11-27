@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class userController extends Controller
 {
@@ -14,6 +15,9 @@ class userController extends Controller
     public function index()
     {
         $user = user::all();
+        $title = 'Delete User!';
+        $text = "Are you sure you want to delete?";
+        confirmDelete($title, $text);
         return view('user.index', compact('user'));
     }
 
@@ -37,6 +41,7 @@ class userController extends Controller
             'email' => $request->email,
         ]);
 
+        Alert::success('Success Title', 'YEY');
         return redirect()->route('user.index');
     }
 
@@ -50,7 +55,7 @@ class userController extends Controller
      */
     public function edit(User $user)
     {
-        return view('user.edit', compact('user'));
+          return view('user.edit', compact('user'));
     }
 
     /**
@@ -66,7 +71,7 @@ class userController extends Controller
         }
 
         $user->update($data);
-
+        Alert::success('Success Title', 'Data Berhasil Diubah');
         return redirect()->route('user.index');
     }
 

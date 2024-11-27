@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('pengembalians', function (Blueprint $table) {
             $table->id();
-            $table->bigIncrements('id_pinjam');
+            $table->BigInteger('id_pinjam');
             $table->date('tgl_pinjam');
             $table->timestamps();
         });

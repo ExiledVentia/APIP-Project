@@ -169,7 +169,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 </script>
-
+@include('sweetalert::alert')
 </body>
 
 </html>
