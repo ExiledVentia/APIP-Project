@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('pengembalians', function (Blueprint $table) {
             $table->id();
+            $table->bigIncrements('id_pinjam');
             $table->date('tgl_pinjam');
-            $table->date('tgl_kembali');
             $table->timestamps();
         });
     }
