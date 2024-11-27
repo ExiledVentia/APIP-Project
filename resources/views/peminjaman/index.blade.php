@@ -102,18 +102,20 @@
                 <thead class="text-center text-black uppercase bg-white">
                     <tr>
                         <th scope="col" class="px-6 py-3">No</th>
-                        <th scope="col" class="px-6 py-3">Nama Barang</th>
-                        <th scope="col" class="px-6 py-3">Kategori</th>
-                        <th scope="col" class="px-6 py-3">Ruangan</th>
-                        <th scope="col" class="px-6 py-3">Tahun Masuk</th>
-                        <th scope="col" class="px-6 py-3">Sumber Dana</th>
-                        <th scope="col" class="px-6 py-3">No Barang</th>
-                        <th scope="col" class="px-6 py-3">Kode Barang</th>
+                        <th scope="col" class="px-6 py-3">Email</th>
+                        <th scope="col" class="px-6 py-3">Nama Peminjaman</th>
+                        <th scope="col" class="px-6 py-3">No telp</th>
+                        <th scope="col" class="px-6 py-3">Peminjam Sebagai</th>
+                        <th scope="col" class="px-6 py-3">Barang Yang Dipinjam</th>
+                        <th scope="col" class="px-6 py-3">Keperluan</th>
+                        <th scope="col" class="px-6 py-3">Lama Peminjaman</th>
+                        <th scope="col" class="px-6 py-3">Dari</th>
+                        <th scope="col" class="px-6 py-3">Sampai</th>
                         <th scope="col" class="px-6 py-3">Opsi</th>
                     </tr>
                 </thead>
                 <tbody>
-                    @forelse ($barang as $k)
+                    @forelse ($peminjaman as $p)
                         <tr class="border-t-2">
                             <td class="px-6 py-3">{{ $k->id }}</td>
                             <td class="px-6 py-3">{{ $k->nama_barang }}</td>
