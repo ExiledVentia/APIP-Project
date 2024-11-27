@@ -6,6 +6,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth as FacadeAuth;
 use Illuminate\Support\Facades\Hash;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class AuthController extends Controller
 {
@@ -18,10 +19,10 @@ class AuthController extends Controller
             'email' => ['required', 'email'],
             'password' => ['required']
         ]);
-
         if (FacadeAuth::attempt($credentials)) {
-            $request->session()->regenerate(); 
-            return redirect()->intended('/dashboard');
+            $user = $request->session()->regenerate(); 
+            Alert::success('Success Title', 'Login Berhasil');
+            return view('user/dashboard');
         };
     }
 
