@@ -13,6 +13,8 @@ return new class extends Migration
     {
         Schema::create('peminjamans', function (Blueprint $table) {
             $table->id();
+            $table->bigInteger('id_user');
+            $table->bigInteger('id_barang');
             $table->date('tgl_pinjam');
             $table->timestamps();
         });

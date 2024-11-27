@@ -8,4 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class pinjam extends Model
 {
     use HasFactory;
+
+    protected $table = 'pinjams';
+    protected $fillable = [
+        'id',
+        'id_user',
+        'id_barang',
+        'tgl_pinjam',
+    ];
 }
