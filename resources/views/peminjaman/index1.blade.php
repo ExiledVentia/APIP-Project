@@ -8,7 +8,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Data Admin</title>
 </head>
-<body class="bg-[url('/img/A.png')] bg-center bg-cover h-[90vh] bg-no-repeat w-fit">
+<body class="bg-[url('/img/A.png')] bg-center bg-cover h-[90vh] bg-no-repeat w-fit overflow-x-hidden ">
 
     <header>
         <div class="w-screen h-32 bg-gradient-to-r from-rose-400 from-10% via-rose-350 to-pink-200 ">
@@ -83,12 +83,7 @@
     <!-- Main Content -->
     <div class="overflow-x-auto flex">
         <div class="w-10/12 border rounded-xl px-16 mt-14 py-5 mx-auto bg-gradient-to-r from-rose-400 via-rose-350 to-pink-200">
-            <form action="{{ route('barang.search') }}" method="GET" class="flex justify-center mb-4">
-                <input type="search" name="query" placeholder="Cari barang..."
-                    class="block w-64 p-2 px-4 ps-2 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500"
-                    required autocomplete="off" style="margin-left: 971px;">
-            </form>
-
+           
             <!-- Table -->
             <table class="w-full text-sm text-left text-black rounded-lg shadow-md overflow-hidden bg-white">
                 <thead class="text-center text-black uppercase bg-white">

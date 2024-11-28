@@ -16,7 +16,7 @@ class PinjamController extends Controller
         ->select('peminjamans.*', 'barangs.nama_barang', 'users.nama')
         ->get();
         // BARU INI YAH... MASIH BELAJAR SOALNY 
-        return view('peminjaman.index', compact('peminjaman'));
+        return view('peminjaman.index1', compact('peminjaman'));
     }
     public function show() {
       

@@ -19,6 +19,12 @@
                 <button class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 mb-4">Add Data</button>
             </a>
 
+            <!--Kembali-->
+            <a href="dashboard"> 
+                <button class="bg-gray-500 text-white px-4 py-2 rounded-md hover:bg-gray-600">Back</button>
+            </a>
+        </div>
+
             <!-- Tabel User -->
             <div class="overflow-x-auto">
                 <table class="min-w-fit bg-white shadow-md rounded-lg overflow-hidden">
