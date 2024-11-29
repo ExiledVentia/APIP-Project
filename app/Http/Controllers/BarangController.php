@@ -57,7 +57,7 @@ class BarangController extends Controller
         'kode_barang' => $request->kode_barang,
     ]);
     
-        Alert::success('Success Title', 'YEY');
+        Alert::success( 'Data berhasil ditambahkan');
         return redirect()->route('barang.index');
     }
 
@@ -87,7 +87,7 @@ class BarangController extends Controller
          */
         $barang = Barangs::findOrfail($id);
         $barang->update($request->all());
-
+        Alert::success( 'Data berhasil diubah');
         return redirect()->route('barang.index');
     }
 

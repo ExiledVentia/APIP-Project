@@ -21,7 +21,7 @@ class AuthController extends Controller
         ]);
         if (FacadeAuth::attempt($credentials)) {
             $user = $request->session()->regenerate(); 
-            Alert::success('Success Title', 'Login Berhasil');
+            Alert::success( 'Login Berhasil');
             return view('user/dashboard');
         };
     }

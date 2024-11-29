@@ -40,8 +40,6 @@ class UserController extends Controller
             'password' => Hash::make($request->password),
             'email' => $request->email,
         ]);
-
-        Alert::success('Success Title', 'YEY');
         return redirect()->route('user.index');
     }
 
@@ -71,7 +69,7 @@ class UserController extends Controller
         }
 
         $user->update($data);
-        Alert::success('Success Title', 'Data Berhasil Diubah');
+        Alert::success('Data Berhasil Diubah');
         return redirect()->route('user.index');
     }
 
