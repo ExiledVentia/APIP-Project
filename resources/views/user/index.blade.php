@@ -9,7 +9,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-    <body class="bg-[url('img/background.jpg')] bg-center bg-cover bg-no-repeat h-[80vh] w-screen">
+    <body class="bg-[url('img/background.jpg')] bg-center bg-cover bg-no-repeat h-[80vh] w-screen overflow-x-hidden">
     <center>
         <div class="container mx-auto mt-10">
             <h1 class="text-4xl font-bold text-gray-800 mb-6">Data Admin</h1>

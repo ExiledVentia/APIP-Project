@@ -14,7 +14,7 @@
 <!-- HTML form for changing admin data. -->
 
 <body>
-    <br><body class="bg-cover bg-center h-screen" style="background-image: url('{{ asset('img/background.jpg') }}')">
+    <br><body class="bg-cover bg-center h-screen overflow-x-hidden" style="background-image: url('{{ asset('img/background.jpg') }}')">
 
     <form action="{{ route('user.update', $user) }}" method="POST">
         @csrf

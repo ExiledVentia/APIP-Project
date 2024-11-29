@@ -17,7 +17,7 @@
         <title>ADD BARANG DATA</title>
     </head>
     
-    <body class="bg-[url('/img/A.png')] bg-center bg-cover h-[90vh] bg-no-repeat w-screen">
+    <body class="bg-[url('/img/A.png')] bg-center bg-cover h-[90vh] bg-no-repeat w-screen overflow-x-hidden">
     <header>
         <div class="h-32 bg-gradient-to-r from-rose-400 from-10% via-rose-350 to-pink-200 ">
            <div class="flex justify-between items-center mr-12">
@@ -82,7 +82,7 @@
     </header>
     
     
-        <div class='w-3/6   border rounded-xl px-11 mt-20 py-20 mx-auto bg-gradient-to-r from-rose-400 from-10% via-rose-350 to-pink-200'> 
+        <div class='w-3/6 border rounded-xl px-11 mt-20 py-20 mx-auto bg-gradient-to-r from-rose-400 from-10% via-rose-350 to-pink-200'> 
             <form id="barangForm" action="{{route('barang.store')}}" method="POST">
                 @csrf
                 <div class="mb-4">
@@ -114,6 +114,39 @@
                 <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
               </svg>
         </button>
+
+        <div class='w-3/6 border rounded-xl px-11 mt-20 py-20 mx-auto bg-gradient-to-r from-rose-400 from-10% via-rose-350 to-pink-200'> 
+            <form id="barangForm" action="{{route('barang.store')}}" method="POST">
+                @csrf
+                <div class="step mb-4 hidden">
+                    <label for="brng_yg_dpnjm"></label>
+                    <input type="text" name="brng_yg_dpnjm" class="w-full h-11 rounded-lg placeholder-pink-600" placeholder="Barang Yang Ingin Dipinjam" required>
+                </div>
+                <div class="step mb-4 hidden">
+                    <label for="kprl_pnjmn_brng"></label>
+                    <input type="text" name="kprl_pnjmn_brng" class="w-full h-11 rounded-lg placeholder-pink-600" placeholder="Keperluan Peminjaman Barang" required>
+                </div>
+                <div class="step mb-4 hidden">
+                    <label for="lama_peminjaman"></label>
+                    <input type="date" name="lama_peminjaman" class="w-full h-11 rounded-lg placeholder-pink-600" placeholder="Lama Peminjaman (Hari/Jam)" required>
+                </div>
+                <div class="step mb-4 hidden">
+                    <label for="dari"></label>
+                    <input type="date" name="dari" class="w-full h-11 rounded-lg placeholder-pink-600" placeholder="Dari" required>
+                </div>
+                <div class="step mb-4 hidden">
+                    <label for="sampai"></label>
+                    <input type="date" name="sampai" class="w-full h-11 rounded-lg placeholder-pink-600" placeholder="Sampai" required>
+                </div>
+            </form>
+        </div>
+        <button type="button" onclick="prevstep()" id="nextStep">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right absolute right-80 top-96" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+              </svg>
+        </button>
+
+
     
     <script>
     document.addEventListener('DOMContentLoaded', function() {

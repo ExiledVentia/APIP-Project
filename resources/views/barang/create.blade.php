@@ -8,7 +8,7 @@
     <title>ADD BARANG DATA</title>
 </head>
 
-<body class="bg-[url('/img/A.png')] bg-center bg-cover h-[90vh] bg-no-repeat w-screen">
+<body class="bg-[url('/img/A.png')] bg-center bg-cover h-[90vh] bg-no-repeat w-screen overflow-x-hidden">
 <header>
     <div class="h-32 bg-gradient-to-r from-rose-400 from-10% via-rose-350 to-pink-200 ">
        <div class="flex justify-between items-center mr-12">
