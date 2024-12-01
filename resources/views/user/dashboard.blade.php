@@ -80,7 +80,7 @@
     
 
    
-   <body class="bg-[url('img/A.png')] bg-center bg-cover h-[85vh] w-auto">
+   <body class="bg-[url('img/A.png')] bg-center bg-cover h-[85vh] w-screen overflow-x-hidden">
     <center>
 
    <h1 style="font-weight: bold; margin-top: 50px;">SISTEM INFORMASI PEMINJAMAN SARANA DAN PRASARANA</h1>
