@@ -15,9 +15,7 @@ class UserController extends Controller
     public function index()
     {
         $user = user::all();
-        $title = 'Delete User!';
-        $text = "Are you sure you want to delete?";
-        confirmDelete($title, $text);
+     
         return view('user.index', compact('user'));
     }
 

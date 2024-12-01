@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Peminjaman Barang</title>
+    <title>Pengembalian Barang</title>
 </head>
 <body class="bg-[url('/img/A.png')] bg-center bg-cover h-screen bg-no-repeat w-screen overflow-x-hidden">
 
@@ -24,23 +24,17 @@
               </svg>
         </button>
     </div>
-    
-    
-    
-    </div>
 </header>
 
-<!-- Form Section -->
+<!-- Form Section Step 1 (Data Peminjam) -->
 <div class="w-3/6 border rounded-xl px-11 py-10 mt-20 mx-auto bg-gradient-to-r from-rose-400 via-rose-350 to-pink-200" id="formStep1">
-    <form action="{{ route('barang.index')}}" method="POST">
-    <!-- Form Step 1 -->
-    <form id="pinjamForm">
+    <form action="{{ route('barang.store') }}" method="POST" id="kembaliForm" enctype="multipart/form-data">
         @csrf
         <div class="mb-4">
             <input type="email" name="email" class="w-full h-11 rounded-lg placeholder-pink-600" placeholder="E-Mail" required>
         </div>
         <div class="mb-4">
-            <input type="text" name="nama_peminjam" class="w-full h-11 rounded-lg placeholder-pink-600" placeholder="Nama Peminjam" required>
+            <input type="text" name="nama_peminjam" class="w-full h-11 rounded-lg placeholder-pink-600" placeholder="Nama Peminjam / Penanggung Jawab" required>
         </div>
         <div class="mb-4">
             <input type="text" name="nomor_telp" class="w-full h-11 rounded-lg placeholder-pink-600" placeholder="Nomor Telp / WhatsApp" required>
@@ -53,7 +47,7 @@
         </div>
     </form>
 
-    <!-- Button next -->
+    <!-- Button Next -->
     <div class="mt-4 mx-auto flex justify-center">
         <button type="button" onclick="nextStep()" id="nextstep" class="py-2">
             <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="currentColor" class="bi bi-caret-right" viewBox="0 0 16 16">
@@ -65,22 +59,33 @@
 
 <!-- Form Section Step 2 (Barang) -->
 <div class="w-3/6 border rounded-xl px-11 py-10 mt-10 mx-auto bg-gradient-to-r from-rose-400 via-rose-350 to-pink-200 hidden" id="formStep2">
-    <form id="pnjmForm">
+    <form id="kmblForm" method="POST" action="{{ route('barang.store') }}" enctype="multipart/form-data">
+        @csrf
         <div class="step mb-4">
-            <input type="text" name="barang_yg_pinjam" class="w-full h-11 rounded-lg placeholder-pink-600" placeholder="Barang Yang Ingin Dipinjam" required>
+            <input type="text" name="barang_yg_kembali" class="w-full h-11 rounded-lg placeholder-pink-600" placeholder="Barang Yang Dikembalikan" required>
         </div>
         <div class="step mb-4">
-            <input type="text" name="keperluan" class="w-full h-11 rounded-lg placeholder-pink-600" placeholder="Keperluan Peminjaman Barang" required>
+            <!-- Input file -->
+            <div class="mt-2 flex items-center space-x-2 text-gray-600">
+                <!-- Wrapper untuk input file dan ikon -->
+                <label for="photo" class="w-full h-44 rounded-lg border-2 border-black flex items-center justify-center px-3 cursor-pointer" style="background-color: white;">
+                    <!-- Input file -->
+                    <input type="file" name="photo" id="photo" class="hidden" accept="image/*" required onchange="previewImage(event)">
+                    
+                    <!-- Preview Image langsung ditampilkan di tempat input -->
+                    <img id="imagePreview" class="w-full h-44 object-cover" style="display:none;">
+                    
+                <!-- Ikon default jika belum ada gambar yang di-upload -->
+                <svg id="icon" xmlns="http://www.w3.org/2000/svg" width="45" height="46" viewBox="0 0 16 16" fill="gray" class="bi bi-download mr-2">
+                    <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5"/>
+                    <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z"/>
+                </svg>
+
+                </label>
+            </div>
         </div>
-        <div class="step mb-4">
-            <input type="date" name="lama_peminjaman" class="w-full h-11 rounded-lg placeholder-pink-600" required>
-        </div>
-        <div class="step mb-4">
-            <input type="text" name="dari" class="w-full h-11 rounded-lg placeholder-pink-600" placeholder="Dari" required>
-        </div>
-        <div class="step mb-4">
-            <input type="text" name="sampai" class="w-full h-11 rounded-lg placeholder-pink-600" placeholder="Sampai" required>
-        </div>
+
+        <!-- Submit Button -->
         <div class="flex justify-center">
             <button type="submit" id="submitButton" class="px-4 py-2 w-6/12 bg-gray-500 text-white rounded-md" disabled>KIRIM</button>
         </div>
@@ -99,7 +104,7 @@
 <script>
     // Fungsi untuk memeriksa apakah semua field diisi
     function checkFields() {
-        const formFields = document.querySelectorAll('#pinjamForm input[required], #pnjmForm input[required]'); // Semua field dengan atribut required
+        const formFields = document.querySelectorAll('#formStep1 input[required], #formStep2 input[required]'); 
         const submitButton = document.getElementById('submitButton');
         
         let allFilled = true;
@@ -124,8 +129,18 @@
         }
     }
 
-    // Menambahkan event listener untuk setiap input form
-    const formFields = document.querySelectorAll('#pinjamForm input[required], #pnjmForm input[required]');
+    // Preview Image function
+    function previewImage(event) {
+        const imagePreview = document.getElementById('imagePreview');
+        const iconPreview = document.getElementById('icon');
+        imagePreview.style.display = 'block';
+        imagePreview.src = URL.createObjectURL(event.target.files[0]);
+        iconPreview.style.display = 'none';
+        checkFields();
+    }
+
+    // Menambahkan event listener untuk setiap input form pada form pertama (formStep1)
+    const formFields = document.querySelectorAll('#formStep1 input[required]');
     formFields.forEach(field => {
         field.addEventListener('input', checkFields);
     });

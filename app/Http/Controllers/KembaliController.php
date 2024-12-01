@@ -12,10 +12,10 @@ class KembaliController extends Controller
 {
     public function index()
     {
-        $pengembalian = DB::table('pengembalian')
-        ->LeftJoin ('peminjaman', 'pengembalian.id_pinjam', '=', 'peminjaman.id')
-        ->select ('pengembalian.*', 'peminjaman.id_user', 'peminjaman.id_barang')
-        ->orderBy('pengembalian.created_at', 'desc')
+        $pengembalian = DB::table('pengembalians')
+        ->LeftJoin ('peminjamans', 'pengembalians.id_pinjam', '=', 'peminjamans.id')
+        ->select ('pengembalians.*', 'peminjamans.id_user', 'peminjamans.id_barang')
+        ->orderBy('pengembalians.created_at', 'desc')
         ->get();
         
         return view('kembali.index', compact('pengembalian'));
