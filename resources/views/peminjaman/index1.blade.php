@@ -125,7 +125,7 @@
                         </tr>
                     @empty
                         <tr>
-                            <td colspan="9" class="text-center py-3">No results found.</td>
+                            <td colspan="14" class="text-center py-3 ">No results found.</td>
                         </tr>
                     @endforelse
                 </tbody>
