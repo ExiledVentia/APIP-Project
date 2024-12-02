@@ -78,14 +78,14 @@
      </header>
 
     <!-- Title Section -->
-    <h1 class="font-bold text-3xl py-1 relative top-12 left-36">PEMINJAMAN</h1>
+    <h1 class="font-bold text-3xl py-1 relative top-12 left-16">PEMINJAMAN</h1>
 
     <!-- Main Content -->
-    <div class="overflow-x-auto flex">
-        <div class="w-10/12 border rounded-xl px-16 mt-14 py-5 mx-auto bg-gradient-to-r from-rose-400 via-rose-350 to-pink-200">
+    <div class="overflow-x-auto flex justify-start">
+        <div class="w-11/12 border rounded-xl px-16 mt-14 py-5 mx-auto bg-gradient-to-r from-rose-400 via-rose-350 to-pink-200">
            
             <!-- Table -->
-            <table class="w-full text-sm text-left text-black rounded-lg shadow-md overflow-hidden bg-white">
+            <table class="w-11/12 text-sm text-center text-black rounded-lg shadow-md overflow-hidden bg-white">
                 <thead class="text-center text-black uppercase bg-white">
                     <tr>
                         <th scope="col" class="px-6 py-3">No</th>
@@ -109,7 +109,7 @@
                             <td class="px-6 py-3">{{ $k->nama_peminjam }}</td>
                             <td class="px-6 py-3">{{ $k->no_telp}}</td>
                             <td class="px-6 py-3">{{ $k->peminjam }}</td>
-                            <td class="px-6 py-3">{{ $k->id_barang }}</td>
+                            <td class="px-6 py-3">{{ $k->nama_barang }}</td>
                             <td class="px-6 py-3">{{ $k->keperluan }}</td>
                             <td class="px-6 py-3">{{ $k->tgl_pinjam }}</td>
                             <td class="px-6 py-3">{{ $k->dari }}</td>

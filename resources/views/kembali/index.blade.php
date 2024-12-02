@@ -18,34 +18,27 @@
        </div>
 
        <div class="flex justify-end relative top-[-50px] right-[20px]">
-        <button onclick="window.location.href='http://127.0.0.1:8000/dashboard'" class="py-2 inline-flex items-center">
+        <a href="/" class="py-2 inline-flex items-center">
             <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="white" class="bi bi-arrow-left-circle-fill" viewBox="0 0 16 16">
                 <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0m3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5z"/>
               </svg>
-        </button>
+        </a>
     </div>
 </header>
 
 <!-- Form Section Step 1 (Data Peminjam) -->
 <div class="w-3/6 border rounded-xl px-11 py-10 mt-20 mx-auto bg-gradient-to-r from-rose-400 via-rose-350 to-pink-200" id="formStep1">
-    <form action="{{ route('barang.store') }}" method="POST" id="kembaliForm" enctype="multipart/form-data">
+    <form id="kembaliForm" action="{{ route('kembali.store')}}" method="POST" enctype="multipart/form-data">
         @csrf
-        <div class="mb-4">
-            <input type="email" name="email" class="w-full h-11 rounded-lg placeholder-pink-600" placeholder="E-Mail" required>
-        </div>
-        <div class="mb-4">
-            <input type="text" name="nama_peminjam" class="w-full h-11 rounded-lg placeholder-pink-600" placeholder="Nama Peminjam / Penanggung Jawab" required>
-        </div>
-        <div class="mb-4">
-            <input type="text" name="nomor_telp" class="w-full h-11 rounded-lg placeholder-pink-600" placeholder="Nomor Telp / WhatsApp" required>
-        </div>
-        <div class="bg-slate-100 text-pink-600 rounded-md px-2">
-            <label class="text-pink-600">Peminjam Sebagai</label>
-            <br>
-            <input type="radio" name="peminjam" value="siswa" required> <label class="text-pink-600">Siswa</label><br>
-            <input type="radio" name="peminjam" value="guru" required> <label class="text-pink-600">Guru</label>
-        </div>
-    </form>
+        <div class="step mb-4">
+            <select name="id_pinjam">
+             <option value="">Pilih Peminjaman</option>  
+                @foreach ($peminjaman as $k)
+                <option value="{{$k->id_pinjam}}">{{$k->nama_barang}}, {{$k->email}}</option>  
+                @endforeach  
+            </select>    
+
+ 
 
     <!-- Button Next -->
     <div class="mt-4 mx-auto flex justify-center">
@@ -59,7 +52,7 @@
 
 <!-- Form Section Step 2 (Barang) -->
 <div class="w-3/6 border rounded-xl px-11 py-10 mt-10 mx-auto bg-gradient-to-r from-rose-400 via-rose-350 to-pink-200 hidden" id="formStep2">
-    <form id="kmblForm" method="POST" action="{{ route('barang.store') }}" enctype="multipart/form-data">
+ 
         @csrf
         <div class="step mb-4">
             <input type="text" name="barang_yg_kembali" class="w-full h-11 rounded-lg placeholder-pink-600" placeholder="Barang Yang Dikembalikan" required>
@@ -68,9 +61,9 @@
             <!-- Input file -->
             <div class="mt-2 flex items-center space-x-2 text-gray-600">
                 <!-- Wrapper untuk input file dan ikon -->
-                <label for="photo" class="w-full h-44 rounded-lg border-2 border-black flex items-center justify-center px-3 cursor-pointer" style="background-color: white;">
+                <label for="foto" class="w-full h-44 rounded-lg border-2 border-black flex items-center justify-center px-3 cursor-pointer" style="background-color: white;">
                     <!-- Input file -->
-                    <input type="file" name="photo" id="photo" class="hidden" accept="image/*" required onchange="previewImage(event)">
+                    <input type="file" name="foto" id="foto" class="hidden" accept="image/*" required onchange="previewImage(event)">
                     
                     <!-- Preview Image langsung ditampilkan di tempat input -->
                     <img id="imagePreview" class="w-full h-44 object-cover" style="display:none;">

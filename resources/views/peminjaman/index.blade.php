@@ -66,7 +66,7 @@
 <div class="w-3/6 border rounded-xl px-11 py-10 mt-10 mx-auto bg-gradient-to-r from-rose-400 via-rose-350 to-pink-200 hidden" id="formStep2">
     <div id="pnjmForm">
         <div class="step mb-4">
-            <select name="id_barang">
+            <select name="id_barang" class="w-full h-11 rounded-lg placeholder-pink-600">
                 @foreach ($peminjaman as $k)
                 <option value="{{$k->id}}">{{$k->nama_barang}}</option>  
                 @endforeach  
