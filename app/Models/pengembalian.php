@@ -11,8 +11,8 @@ class pengembalian extends Model
 
     protected $table = 'pengembalians';
     protected $fillable = [
-        'id',
         'id_pinjam',
         'tgl_kembali',
+        'foto',
     ];
 }

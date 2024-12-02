@@ -4,6 +4,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BarangController;
 use App\Http\Controllers\KembaliController;
 use App\Http\Controllers\PinjamController;
+use App\Http\Controllers\PinjamUserController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -16,9 +17,11 @@ Route::get('/dashboard', function () {
 }); // dashboard admin (aku murka)
 
 
+
 Route::resource('barang', BarangController::class);
 Route::resource('user', UserController::class);
 Route::get('/search', [BarangController::class, 'search'])->name('barang.search');
+Route::get('/pinjam', [PinjamUserController::class, 'index'])->name('pinjam.user');
 
 Route::get('/login', [AuthController::class, 'login'] )->name('login');
 Route::post('/login', [AuthController::class, 'authlogin'] )->name('auth.login');

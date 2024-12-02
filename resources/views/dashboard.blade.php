@@ -15,7 +15,7 @@
       <div class="flex justify-between items-center">
           <img class="h-auto max-w-56 mt-6 ml-28" src="{{ URL('img/login_logo.jpg') }}" alt="logo">
 
-    <a href="{{route ('login')}}">
+    <a href="{{route('login')}}">
          <button type="button" class="w-36 text-white mr-5 mt-9 bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-md text-sm py-2.5 me-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 focus:outline-none dark:focus:ring-blue-800">Login</button>
    </a>
 
@@ -39,7 +39,7 @@
       </div>
 
    <div class="pengembalian mb-4">
-      <a href="#">
+      <a href="kembali">
         <button type="button" class="w-72 h-28 mr-20 rounded-md text-white bg-red-500 flex items-center justify-around px-4">
           <span>PENGEMBALIAN</span>
       <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="white" class="bi bi-folder2-open" viewBox="0 0 16 16">

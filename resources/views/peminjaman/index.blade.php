@@ -18,11 +18,11 @@
        </div>
 
        <div class="flex justify-end relative top-[-50px] right-[20px]">
-        <button onclick="window.location.href='http://127.0.0.1:8000/dashboard'" class="py-2 inline-flex items-center">
+        <a href="/" class="py-2 inline-flex items-center">
             <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="white" class="bi bi-arrow-left-circle-fill" viewBox="0 0 16 16">
                 <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0m3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5z"/>
               </svg>
-        </button>
+        </a>
     </div>
     
     
@@ -32,9 +32,9 @@
 
 <!-- Form Section -->
 <div class="w-3/6 border rounded-xl px-11 py-10 mt-20 mx-auto bg-gradient-to-r from-rose-400 via-rose-350 to-pink-200" id="formStep1">
-    <form action="{{ route('barang.index')}}" method="POST">
+
     <!-- Form Step 1 -->
-    <form id="pinjamForm">
+    <form id="pinjamForm" action="{{ route('peminjaman.store')}}" method="POST">
         @csrf
         <div class="mb-4">
             <input type="email" name="email" class="w-full h-11 rounded-lg placeholder-pink-600" placeholder="E-Mail" required>
@@ -43,7 +43,7 @@
             <input type="text" name="nama_peminjam" class="w-full h-11 rounded-lg placeholder-pink-600" placeholder="Nama Peminjam" required>
         </div>
         <div class="mb-4">
-            <input type="text" name="nomor_telp" class="w-full h-11 rounded-lg placeholder-pink-600" placeholder="Nomor Telp / WhatsApp" required>
+            <input type="text" name="no_telp" class="w-full h-11 rounded-lg placeholder-pink-600" placeholder="Nomor Telp / WhatsApp" required>
         </div>
         <div class="bg-slate-100 text-pink-600 rounded-md px-2">
             <label class="text-pink-600">Peminjam Sebagai</label>
@@ -51,7 +51,6 @@
             <input type="radio" name="peminjam" value="siswa" required> <label class="text-pink-600">Siswa</label><br>
             <input type="radio" name="peminjam" value="guru" required> <label class="text-pink-600">Guru</label>
         </div>
-    </form>
 
     <!-- Button next -->
     <div class="mt-4 mx-auto flex justify-center">
@@ -65,15 +64,19 @@
 
 <!-- Form Section Step 2 (Barang) -->
 <div class="w-3/6 border rounded-xl px-11 py-10 mt-10 mx-auto bg-gradient-to-r from-rose-400 via-rose-350 to-pink-200 hidden" id="formStep2">
-    <form id="pnjmForm">
+    <div id="pnjmForm">
         <div class="step mb-4">
-            <input type="text" name="barang_yg_pinjam" class="w-full h-11 rounded-lg placeholder-pink-600" placeholder="Barang Yang Ingin Dipinjam" required>
+            <select name="id_barang">
+                @foreach ($peminjaman as $k)
+                <option value="{{$k->id}}">{{$k->nama_barang}}</option>  
+                @endforeach  
+            </select>    
         </div>
         <div class="step mb-4">
             <input type="text" name="keperluan" class="w-full h-11 rounded-lg placeholder-pink-600" placeholder="Keperluan Peminjaman Barang" required>
         </div>
         <div class="step mb-4">
-            <input type="date" name="lama_peminjaman" class="w-full h-11 rounded-lg placeholder-pink-600" required>
+            <input type="date" name="tgl_pinjam" class="w-full h-11 rounded-lg placeholder-pink-600" required>
         </div>
         <div class="step mb-4">
             <input type="text" name="dari" class="w-full h-11 rounded-lg placeholder-pink-600" placeholder="Dari" required>
@@ -84,7 +87,8 @@
         <div class="flex justify-center">
             <button type="submit" id="submitButton" class="px-4 py-2 w-6/12 bg-gray-500 text-white rounded-md" disabled>KIRIM</button>
         </div>
-    </form>
+    </div>
+</form>
 
     <!-- Previous Button -->
     <div class="mt-4 mx-auto flex justify-around">

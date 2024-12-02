@@ -102,16 +102,19 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @forelse ($peminjaman as $p)
+                    @forelse ($peminjaman as $k)
                         <tr class="border-t-2">
-                            <td class="px-6 py-3">{{ $p->id }}</td>
-                            <td class="px-6 py-3">{{ $p->email}}</td>
-                            <td class="px-6 py-3">{{ $p->kategori }}</td>
-                            <td class="px-6 py-3">{{ $p->ruangan }}</td>
-                            <td class="px-6 py-3">{{ $p->tahun_masuk }}</td>
-                            <td class="px-6 py-3">{{ $p->sumber_dana }}</td>
-                            <td class="px-6 py-3">{{ $p->no_barang }}</td>
-                            <td class="px-6 py-3">{{ $p->kode_barang }}</td>
+                            <td class="px-6 py-3">{{ $k->id }}</td>
+                            <td class="px-6 py-3">{{ $k->email}}</td>
+                            <td class="px-6 py-3">{{ $k->nama_peminjam }}</td>
+                            <td class="px-6 py-3">{{ $k->no_telp}}</td>
+                            <td class="px-6 py-3">{{ $k->peminjam }}</td>
+                            <td class="px-6 py-3">{{ $k->id_barang }}</td>
+                            <td class="px-6 py-3">{{ $k->keperluan }}</td>
+                            <td class="px-6 py-3">{{ $k->tgl_pinjam }}</td>
+                            <td class="px-6 py-3">{{ $k->dari }}</td>
+                            <td class="px-6 py-3">{{ $k->sampai }}</td>
+
                             <td class="px-6 py-3 flex space-x-2">
                                 <form action="{{ route('barang.destroy', $k->id) }}" method="POST"
                                     style="display:inline;">

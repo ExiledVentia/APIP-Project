@@ -6,19 +6,17 @@ use App\Models\barangs;
 use App\Models\pinjam;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class PinjamController extends Controller
 {
     public function index() {
-        $peminjaman = DB::table('peminjamans')
-        ->leftJoin('barangs', 'peminjamans.id_barang', '=', 'barangs.id')
-        ->select('peminjamans.*', 'barangs.nama_barang',)
+        $peminjaman = DB::table('barangs')
         ->get();
         // BARU INI YAH... MASIH BELAJAR SOALNY BUAT PENGGUNA BUKAN ADMIN
-        return view('peminjaman.index1', compact('peminjaman'));
+        return view('peminjaman.index', compact('peminjaman'));
     }
     public function show() {
-    
     }
 
     public function create() {
@@ -26,19 +24,32 @@ class PinjamController extends Controller
     }
 
     public function store(Request $request) {
+        // dd($request->all());
         $request->validate([
-            'id_user' => 'required',
             'id_barang' => 'required',
-            'tanggal_pinjam' => 'required',
-            'tanggal_kembali' => 'required',
+            'email' => 'required',
+            'tgl_pinjam' => 'required',
+            'nama_peminjam' => 'required',
+            'no_telp' => 'required',
+            'peminjam' => 'required',
+            'keperluan' => 'required',
+            'dari' => 'required',
+            'sampai' => 'required',
         ]);
         pinjam::create([
-            'id_user' => $request->id_user,
             'id_barang' => $request->id_barang,
-            'tanggal_pinjam' => $request->tanggal_pinjam,
-            'tanggal_kembali' => $request->tanggal_kembali,
+            'email' => $request->email,
+            'tgl_pinjam' => $request->tgl_pinjam,
+            'nama_peminjam' => $request->nama_peminjam,
+            'no_telp' => $request->no_telp,
+            'peminjam' => $request->peminjam,
+            'keperluan' => $request->keperluan,
+            'dari' => $request->dari,
+            'sampai' => $request->sampai,
+
         ]);
-        return redirect()->route('peminjaman.index');
-        //test doang asli gw belum tau bisa ato engga
+        Alert::success( 'Data berhasil ditambahkan');
+        return view('/dashboard');
     }
+
 }

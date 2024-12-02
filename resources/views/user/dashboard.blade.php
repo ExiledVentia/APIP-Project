@@ -101,7 +101,7 @@
    </div>
 
    <div class="peminjaman mb-4">
-      <a href="peminjaman">
+      <a href="{{route('pinjam.user')}}">
         <button type="button" class="w-72 h-28 mr-1 rounded-md text-white bg-red-500 flex items-center justify-around px-4">
           <span>PEMINJAMAN</span>
           <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="white" class="bi bi-folder2" viewBox="0 0 16 16">
