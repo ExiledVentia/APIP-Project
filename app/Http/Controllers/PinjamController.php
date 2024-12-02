@@ -12,10 +12,9 @@ class PinjamController extends Controller
     public function index() {
         $peminjaman = DB::table('peminjamans')
         ->leftJoin('barangs', 'peminjamans.id_barang', '=', 'barangs.id')
-        ->leftJoin('users', 'peminjamans.id_user', '=', 'users.id')
-        ->select('peminjamans.*', 'barangs.nama_barang', 'users.nama')
+        ->select('peminjamans.*', 'barangs.nama_barang',)
         ->get();
-        // BARU INI YAH... MASIH BELAJAR SOALNY 
+        // BARU INI YAH... MASIH BELAJAR SOALNY BUAT PENGGUNA BUKAN ADMIN
         return view('peminjaman.index1', compact('peminjaman'));
     }
     public function show() {

@@ -14,7 +14,7 @@ class KembaliController extends Controller
     {
         $pengembalian = DB::table('pengembalians')
         ->LeftJoin ('peminjamans', 'pengembalians.id_pinjam', '=', 'peminjamans.id')
-        ->select ('pengembalians.*', 'peminjamans.id_user', 'peminjamans.id_barang')
+        ->select ('pengembalians.*', 'peminjamans.tgl_pinjam', 'peminjamans.tgl_pinjam')
         ->orderBy('pengembalians.created_at', 'desc')
         ->get();
         
