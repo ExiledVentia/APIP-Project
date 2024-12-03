@@ -6,7 +6,6 @@ APIP (Aplikasi Inventaris dan Peminjaman Barang) adalah aplikasi web yang dibang
 
 * Manajemen inventaris
 * Peminjaman dan pengembalian barang
-* Dasbor pengguna untuk mengelola inventaris pribadi dan riwayat peminjaman
 
 ## Overview
 
