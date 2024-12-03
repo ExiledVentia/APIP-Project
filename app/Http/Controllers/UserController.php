@@ -15,7 +15,7 @@ class UserController extends Controller
     public function index()
     {
         $user = user::all();
-     
+    
         return view('user.index', compact('user'));
     }
 
@@ -77,7 +77,6 @@ class UserController extends Controller
     public function destroy(User $user)
     {
         $user->delete();
-
         return redirect()->route('user.index');
     }
 }

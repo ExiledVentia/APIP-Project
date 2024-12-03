@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->BigInteger('id_pinjam');
             $table->date('tgl_pinjam');
+            $table->string('foto', 255);
             $table->timestamps();
         });
     }

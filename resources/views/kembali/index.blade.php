@@ -31,32 +31,14 @@
     <form id="kembaliForm" action="{{ route('kembali.store')}}" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="step mb-4">
-            <select name="id_pinjam">
+            <select name="id_pinjam" class="w-full h-11 rounded-lg placeholder-pink-600">
              <option value="">Pilih Peminjaman</option>  
-                @foreach ($peminjaman as $k)
-                <option value="{{$k->id_pinjam}}">{{$k->nama_barang}}, {{$k->email}}</option>  
+                @foreach ($pengembalian as $k)
+                <option value="{{$k->id}}">{{$k->email}}, {{$k->nama_barang}}, {{$k->no_telp}}, {{$k->peminjam}}</option>  
                 @endforeach  
             </select>    
 
- 
 
-    <!-- Button Next -->
-    <div class="mt-4 mx-auto flex justify-center">
-        <button type="button" onclick="nextStep()" id="nextstep" class="py-2">
-            <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="currentColor" class="bi bi-caret-right" viewBox="0 0 16 16">
-                <path d="M6 12.796V3.204L11.481 8zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753"/>
-            </svg>
-        </button>
-    </div>
-</div>
-
-<!-- Form Section Step 2 (Barang) -->
-<div class="w-3/6 border rounded-xl px-11 py-10 mt-10 mx-auto bg-gradient-to-r from-rose-400 via-rose-350 to-pink-200 hidden" id="formStep2">
- 
-        @csrf
-        <div class="step mb-4">
-            <input type="text" name="barang_yg_kembali" class="w-full h-11 rounded-lg placeholder-pink-600" placeholder="Barang Yang Dikembalikan" required>
-        </div>
         <div class="step mb-4">
             <!-- Input file -->
             <div class="mt-2 flex items-center space-x-2 text-gray-600">
@@ -83,16 +65,6 @@
             <button type="submit" id="submitButton" class="px-4 py-2 w-6/12 bg-gray-500 text-white rounded-md" disabled>KIRIM</button>
         </div>
     </form>
-
-    <!-- Previous Button -->
-    <div class="mt-4 mx-auto flex justify-around">
-        <button type="button" onclick="prevStep()" id="prevstep" class="py-2">
-            <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="currentColor" class="bi bi-caret-left" viewBox="0 0 16 16">
-                <path d="M10 12.796V3.204L4.519 8zm-.659.753-5.48-4.796a1 1 0 0 1 0-1.506l5.48-4.796A1 1 0 0 1 11 3.204v9.592a1 1 0 0 1-1.659.753"/>
-              </svg>
-        </button>
-    </div>
-</div>
 
 <script>
     // Fungsi untuk memeriksa apakah semua field diisi

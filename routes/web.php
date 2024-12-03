@@ -3,6 +3,7 @@
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BarangController;
 use App\Http\Controllers\KembaliController;
+use App\Http\Controllers\KembaliUserController;
 use App\Http\Controllers\PinjamController;
 use App\Http\Controllers\PinjamUserController;
 use App\Http\Controllers\UserController;
@@ -22,6 +23,8 @@ Route::resource('barang', BarangController::class);
 Route::resource('user', UserController::class);
 Route::get('/search', [BarangController::class, 'search'])->name('barang.search');
 Route::get('/pinjam', [PinjamUserController::class, 'index'])->name('pinjam.user');
+Route::get('/pengembalian', [KembaliUserController::class, 'index'])->name('kembali.user');
+// Route::delete('/pengembalian', [KembaliUserController::class, 'delete'])->name('kembali.hapus');
 
 Route::get('/login', [AuthController::class, 'login'] )->name('login');
 Route::post('/login', [AuthController::class, 'authlogin'] )->name('auth.login');

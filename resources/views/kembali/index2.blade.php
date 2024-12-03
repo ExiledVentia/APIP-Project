@@ -76,59 +76,39 @@
     </header>
 
    <!-- Title Section -->
-   <h1 class="font-bold text-3xl py-1 relative top-12 left-36">INVENTARIS</h1>
+   <h1 class="font-bold text-3xl py-1 relative top-12 left-36">PENGEMBALIAN</h1>
 
    <!-- Main Content -->
-   <div class="overflow-x-auto flex">
+   <div class="overflow-x-auto">
        <div class="w-10/12 border rounded-xl px-16 mt-14 py-5 mx-auto bg-gradient-to-r from-rose-400 via-rose-350 to-pink-200">
-           <form action="{{ route('barang.search') }}" method="GET" class="flex justify-center mb-4">
-               <input type="search" name="query" placeholder="Cari barang..."
-                   class="block w-64 p-2 px-4 ps-2 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500"
-                   required autocomplete="off" style="margin-left: 971px;">
-           </form>
 
-           <div class="flex justify-end mb-4">
-               <a href="{{ route('barang.create') }}">
-                   <button class="text-black bg-rose-400 hover:bg-red-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-md text-sm px-5 py-1.5">
-                       + Tambah Barang
-                   </button>
-               </a>
-           </div>
 
            <!-- Table -->
            <table class="w-full text-sm text-left text-black rounded-lg shadow-md overflow-hidden bg-white">
                <thead class="text-center text-black uppercase bg-white">
                    <tr>
                        <th scope="col" class="px-6 py-3">No</th>
-                       <th scope="col" class="px-6 py-3">Nama Barang</th>
-                       <th scope="col" class="px-6 py-3">Kategori</th>
-                       <th scope="col" class="px-6 py-3">Ruangan</th>
-                       <th scope="col" class="px-6 py-3">Tahun Masuk</th>
-                       <th scope="col" class="px-6 py-3">Sumber Dana</th>
-                       <th scope="col" class="px-6 py-3">No Barang</th>
-                       <th scope="col" class="px-6 py-3">Kode Barang</th>
+                       <th scope="col" class="px-6 py-3">Email</th>
+                       <th scope="col" class="px-6 py-3">Nama Peminjam</th>
+                       <th scope="col" class="px-6 py-3">No_telp</th>
+                       <th scope="col" class="px-6 py-3">Peminjam Sebagai</th>
+                       <th scope="col" class="px-6 py-3">Barang Dikembalikan</th>
+                       <th scope="col" class="px-6 py-3">Bukti</th>
                        <th scope="col" class="px-6 py-3">Opsi</th>
                    </tr>
                </thead>
                <tbody>
-                   @forelse ($barang as $k)
-                       <tr class="border-t-2">
+                   @forelse ($pengembalian as $k)
+                       <tr class="border-t-2 text-center">
                            <td class="px-6 py-3">{{ $k->id }}</td>
-                           <td class="px-6 py-3">{{ $k->nama_barang }}</td>
-                           <td class="px-6 py-3">{{ $k->kategori }}</td>
-                           <td class="px-6 py-3">{{ $k->ruangan }}</td>
-                           <td class="px-6 py-3">{{ $k->tahun_masuk }}</td>
-                           <td class="px-6 py-3">{{ $k->sumber_dana }}</td>
-                           <td class="px-6 py-3">{{ $k->no_barang }}</td>
-                           <td class="px-6 py-3">{{ $k->kode_barang }}</td>
+                           <td class="px-6 py-3">{{ $k->email }}</td>
+                           <td class="px-6 py-3">{{ $k->nama_peminjam }}</td>
+                           <td class="px-6 py-3">{{ $k->no_telp }}</td>
+                           <td class="px-6 py-3">{{ $k->peminjam }}</td>
+                           <td class="px-6 py-3">{{ $k->nama_barang}}</td>
+                           <td class="px-6 py-3">{{ $k->foto }}</td>
                            <td class="px-6 py-3 flex space-x-2">
-                               <button>
-                                   <a href="{{ route('barang.edit', $k->id) }}">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gear-wide-connected" viewBox="0 0 16 16">
-                                       <path d="M7.068.727c.243-.97 1.62-.97 1.864 0l.071.286a.96.96 0 0 0 1.622.434l.205-.211c.695-.719 1.888-.03 1.613.931l-.08.284a.96.96 0 0 0 1.187 1.187l.283-.081c.96-.275 1.65.918.931 1.613l-.211.205a.96.96 0 0 0 .434 1.622l.286.071c.97.243.97 1.62 0 1.864l-.286.071a.96.96 0 0 0-.434 1.622l.211.205c.719.695.03 1.888-.931 1.613l-.284-.08a.96.96 0 0 0-1.187 1.187l.081.283c.275.96-.918 1.65-1.613.931l-.205-.211a.96.96 0 0 0-1.622.434l-.071.286c-.243.97-1.62.97-1.864 0l-.071-.286a.96.96 0 0 0-1.622-.434l-.205.211c-.695.719-1.888.03-1.613-.931l.08-.284a.96.96 0 0 0-1.186-1.187l-.284.081c-.96.275-1.65-.918-.931-1.613l.211-.205a.96.96 0 0 0-.434-1.622l-.286-.071c-.97-.243-.97-1.62 0-1.864l.286-.071a.96.96 0 0 0 .434-1.622l-.211-.205c-.719-.695-.03-1.888.931-1.613l.284.08a.96.96 0 0 0 1.187-1.186l-.081-.284c-.275-.96.918-1.65 1.613-.931l.205.211a.96.96 0 0 0 1.622-.434zM12.973 8.5H8.25l-2.834 3.779A4.998 4.998 0 0 0 12.973 8.5m0-1a4.998 4.998 0 0 0-7.557-3.779l2.834 3.78zM5.048 3.967l-.087.065zm-.431.355A4.98 4.98 0 0 0 3.002 8c0 1.455.622 2.765 1.615 3.678L7.375 8zm.344 7.646.087.065z"/>
-                                     </svg></a>
-                               </button>
-                               <form action="{{ route('barang.destroy', $k->id) }}" method="POST"
+                               <form action="{{ route('kembali.hapus', $k->id) }}" method="POST"
                                    style="display:inline;">
                                    @csrf
                                    @method('DELETE')
